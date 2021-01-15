@@ -1,0 +1,47 @@
+@import '../variables';
+
+$corner: linear-gradient($secondary, $secondary);
+
+// Contribution
+.profile_contribution {
+	color: white;
+	background: $primary;
+	border-left: 3px solid #252525;
+}
+
+// Annotation contribution
+.standalone_annotation {
+	background: $dark-secondary;
+
+	// Annotated snippet
+	.referent {
+		background: $dark-tertiary;
+		box-shadow: none;
+	}
+}
+
+// Stats
+.statistics_panel {
+	background: $primary;
+
+	// Stats icons
+	.inline_icon {
+		fill: white;
+	}
+}
+
+// EDIT button
+.square_button {
+	border: $rect-border;
+	color: white;
+
+	// Pencil icon
+	.inline_icon {
+		fill: white;
+	}
+}
+
+// Bio
+.white_container {
+	background: $primary;
+}

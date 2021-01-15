@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.act-messages_inbox {
+    .feed_dropdown-item {
+        border-top: 0.15rem solid #333333;
+
+        &:hover {
+            background: $primary-hover;
+        }
+    }
+}

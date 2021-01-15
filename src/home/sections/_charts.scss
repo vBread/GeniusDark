@@ -1,0 +1,66 @@
+@import '../../variables';
+
+#top-songs {
+    background: $primary;
+
+    // CHARTS header
+    .fEyCAH {
+        color: white;
+    }
+
+    // Hover color
+    .qsIlk:hover {
+        background: $dark-primary;
+    }
+
+    // SONGS / ALL GENRES / TODAY dropdown
+    .dqbVnf {
+        border: $rect-border;
+
+        .euenQK {
+
+            // Dropdown text
+            > .lcnMaT {
+                color: white;
+            }
+
+            // Dropdown icon
+            > .cMZZs svg {
+                fill: white
+            }
+
+            background: $primary;
+        }
+
+        // Dropdown content
+        .hnIVtc {
+            background: $primary;
+
+            // Dropdown table headers
+            .lcnMaT {
+                color: white
+            }
+
+            /* Selected icon */
+            .gIwQZZ .gMvRPT svg {
+                fill: white;
+            }
+        }
+    }
+
+    // Song views
+    .ljPCDr {
+        color: white;
+    }
+
+    // Song views icon
+    .GcnrE svg {
+        fill: white;
+    }
+
+    // LOAD MORE button
+    .gsoAZX {
+        border: 2px solid white;
+        color: white;
+    }
+}

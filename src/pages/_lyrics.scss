@@ -1,0 +1,346 @@
+@import '../variables';
+
+.song_body {
+	background: $tertiary;
+	color: white;
+
+	// Metadata
+	.gray_container {
+		background: $dark-secondary;
+
+		svg {
+			fill: white;
+		}
+
+		.tiny_edit_button-svg {
+			background: transparent;
+		}
+	}
+
+	// Song info
+	.metadata_unit-info--text_only {
+		color: white;
+	}
+
+	// Album info
+	.song_album-info {
+		&-title,
+		&-artist {
+			color: white;
+		}
+	}
+
+	// Album tracks
+	.track_listing-track {
+		a {
+			color: scale-color(silver, $lightness: -25%);
+
+			// Missing Lyrics label
+			span {
+				color: $accent;
+			}
+		}
+
+		// Track number
+		span {
+			color: scale-color(silver, $lightness: -25%);
+		}
+
+		// Current track
+		&--current span {
+			color: white;
+		}
+	}
+
+	// Song bio input
+	.wysiwyg_input {
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+
+		background: $dark-secondary;
+		border: $dark-border;
+	}
+
+	// Save and cancel buttons
+	.u-top_margin {
+		// Save button
+		.square_item_and_iq {
+			.square_button {
+				border: none;
+
+				&--green:hover {
+					background: none;
+				}
+
+				&:hover {
+					background: none;
+					color: $green;
+				}
+			}
+		}
+
+		// Cancel button
+		.square_button {
+			border: none;
+
+			&--gray:hover {
+				background: none;
+			}
+
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+
+	// Missing Track Info inputs
+	.tags_input {
+		.tags.focused {
+			box-shadow: none;
+			caret-color: white;
+		}
+
+		.input {
+			color: white;
+		}
+
+		// Autocomplete suggestions
+		.autocomplete {
+			background: $secondary;
+			box-shadow: none;
+		}
+
+		.suggestion {
+			&-list::-webkit-scrollbar {
+				background: #303030;
+				width: 20px;
+
+				&-thumb {
+					background: white;
+					border: 0.3rem solid #303030;
+				}
+			}
+
+			&-item.selected {
+				background: #303030;
+			}
+		}
+	}
+
+	// Release date input
+	.square_select_group-single {
+		position: relative;
+
+		&:before {
+			background: none;
+		}
+
+		// Dropdown arrow
+		&:after {
+			filter: invert(1);
+		}
+
+		select {
+			border: $dark-border;
+			background: $dark-primary;
+			color: white;
+		}
+	}
+
+	// Input
+	.square_input {
+		background: $primary;
+		border: $dark-border;
+		color: silver;
+
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	.iq_pill {
+		color: $green;
+		margin-top: 0.52rem;
+	}
+
+	// Lyrics
+	.lyrics {
+		margin-top: -1rem;
+
+		// Editing
+		.wysiwyg_input {
+			background: $dark-secondary;
+		}
+	}
+
+	// Buttons
+	.lyrics_controls {
+		background: $tertiary;
+		color: white;
+
+		button {
+			&.square_button {
+				border: none;
+
+				&:hover {
+					background: none;
+				}
+			}
+
+			// Edit Lyrics button
+			&[title='shortcut: shift+l'].square_button:hover {
+				color: $accent;
+			}
+
+			// Edit Song Facts button
+			&[title='(shift+a)'].square_button {
+				padding-left: 12px;
+				border-left: $rect-border;
+
+				&:hover {
+					color: $accent;
+				}
+			}
+
+			// Save button
+			&[title='(shift+enter)'].square_button:hover > span:hover {
+				color: $green;
+			}
+
+			// Cancel button
+			&[tabindex='3'].square_button {
+				padding-left: 10px;
+				border-left: $rect-border;
+
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+
+	// Share buttons
+	.share_buttons {
+		// Facebook
+		facebook-share-button {
+			.square_button {
+				border: none;
+
+				&--facebook {
+					background: none;
+				}
+			}
+
+			svg:hover {
+				fill: #3b5998;
+			}
+		}
+
+		// Twitter
+		twitter-share-button {
+			.square_button {
+				border: none;
+
+				&--twitter {
+					background: none;
+				}
+			}
+
+			svg:hover {
+				fill: #00acee;
+			}
+		}
+
+		// Pyong
+		pyong-button {
+			.square_button {
+				border: none;
+
+				&:hover {
+					background: none;
+				}
+
+				svg:hover {
+					fill: $genius-yellow;
+				}
+			}
+		}
+
+		// Following
+		follow-button {
+			.square_button {
+				border: none;
+
+				&--active {
+					color: $accent;
+					background: none;
+				}
+
+				// If not following
+				&:hover {
+					color: $accent;
+					background: none;
+				}
+			}
+		}
+
+		// Embed
+		.square_button {
+			&--active:last-child {
+				border: none;
+				color: $accent;
+				background: none;
+			}
+
+			&:last-child {
+				border: none;
+
+				&:hover {
+					color: $accent;
+					background: none;
+				}
+			}
+		}
+	}
+
+	// Embed Copy button
+	.ellipsis_menu-row {
+		.square_button {
+			border: none;
+
+			&:hover {
+				color: $green;
+				background: none;
+			}
+		}
+
+		&:nth-child(2) {
+			label {
+				display: none;
+			}
+
+			&:before {
+				content: 'WEBSITE:';
+				font-size: 0.875rem;
+				margin-right: 1.7em;
+			}
+		}
+	}
+
+	// More On Genius section
+	.u-xx_large_vertical_margins,
+	// Preview new song page button
+	.react_song_page_preview_link {
+		display: none;
+	}
+}
+
+// Pyong tooltop
+.drop-content .tooltip,
+// Apple music preview
+.apple_music_player_iframe_wrapper {
+	display: none;
+}

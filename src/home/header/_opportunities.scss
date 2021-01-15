@@ -1,0 +1,114 @@
+@import '../../variables';
+
+inbox-container[inbox-name='iq_inbox'],
+.standalone_inbox--embed {
+	background: $dark-primary;
+
+	&::-webkit-scrollbar {
+		background: #303030;
+		width: 20px;
+
+		&-thumb {
+			background: white;
+			border: 0.3rem solid #303030;
+		}
+	}
+
+	// Opportunity card
+	.contribution_opportunity {
+		background: $dark-secondary;
+		box-shadow: none;
+
+		&-content {
+			// Input focused
+			.tags.focused {
+				box-shadow: none;
+			}
+
+			// Save & Cancel buttons
+			.u-small_top_margin {
+				.square_button {
+					border: none;
+				}
+
+				// Cancel hover
+				span:hover {
+					background: none;
+					color: $red;
+				}
+
+				// Save hover
+				button:hover {
+					background: none;
+					color: $green;
+				}
+			}
+
+			.iq_pill {
+				color: $green;
+				margin-top: 0.52rem;
+			}
+		}
+
+		&-actions {
+			background: darken($color: $dark-secondary, $amount: 2);
+
+			// Open & Skip buttons
+			.u-text_right {
+				.square_button {
+					border: none;
+
+					&--transparent {
+						padding: 0 0.7em;
+						transform: scale(1.2);
+					}
+
+					&--gray:hover {
+						background: none;
+					}
+				}
+
+				// Skip hover
+				span:hover {
+					color: $red;
+				}
+
+				// Open hover
+				a:hover {
+					color: $green;
+				}
+			}
+
+			// Edit button
+			.square_item_and_iq {
+				.square_button {
+					border: none;
+					color: white;
+
+					&--green:hover {
+						color: $green;
+						background: none;
+					}
+				}
+
+				.iq_pill {
+					margin-top: 0.42rem;
+					color: $green;
+				}
+			}
+		}
+	}
+
+	// Input
+	.square_input {
+		background: lighten($color: $dark-secondary, $amount: 2);
+		border: 0.15rem solid darken($color: $dark-tertiary, $amount: 3);
+		color: $green;
+		caret-color: white;
+
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}

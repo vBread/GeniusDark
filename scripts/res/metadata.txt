@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@author         Bread <developernamedbread@gmail.com>
+@name           Genius Dark
+@description	Dark mode theme for Genius
+@version        1.0.0
+@namespace      https://github.com/vBread
+@homepageURL    https://github.com/vBread/GeniusDark
+@updateURL    	https://github.com/vBread/GeniusDark/genius-dark.user.css
+@supportURL		https://github.com/vBread/GeniusDark/issues
+@license        Apache-2.0
+@var            color accent-color "Accent Color" #3498db
+==/UserStyle== */
+
+@-moz-document regexp("https://genius\\.com\\/?(.+)?") {
+	%s
+}

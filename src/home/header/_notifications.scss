@@ -1,0 +1,182 @@
+@import '../../variables';
+
+.act-show.cont-inboxes.snarly {
+	.feed_dropdown {
+		&-item {
+			border-top: 0.15rem solid #333333;
+
+			&:hover {
+				background: $primary-hover;
+			}
+
+			&--active {
+				background: $primary;
+			}
+
+			// Unread
+			&--unread {
+				background: darken($color: $dark-secondary, $amount: 2);
+				border-left: 2px solid white;
+
+				&::before {
+					display: none;
+				}
+
+				&:hover {
+					background: lighten($color: $dark-secondary, $amount: 1);
+				}
+			}
+		}
+
+		&-expanded_section {
+			// Song
+			.inbox_line_item_detail {
+				background: $primary;
+
+				.mini_card {
+					background: $secondary;
+					border: 0.3rem solid $secondary;
+
+					&:hover {
+						background: $primary-hover;
+					}
+
+					// Views icon
+					.inline_icon {
+						fill: white;
+					}
+				}
+
+				// Lyric edits
+				.lyrics {
+					// Insertions
+					ins {
+						color: $green;
+						background: none !important;
+						text-decoration: none;
+					}
+
+					// Deletions
+					del {
+						color: $red;
+						background: none !important;
+						text-decoration: none;
+					}
+				}
+
+				// Annotation
+				.referent {
+					&_container {
+						background: $dark-secondary;
+					}
+
+					// Highlight
+					&--white {
+						background: $dark-tertiary;
+						box-shadow: none;
+					}
+				}
+
+				// Buttons
+				.u-vertical_margins {
+					// Edit
+					.square_button {
+						border: none;
+
+						&:hover {
+							background: none;
+							color: $green;
+						}
+					}
+
+					.u-float_right div:nth-child(3):hover {
+						color: white;
+					}
+
+					// Up/downvote & total
+					.voting {
+						.square_button--transparent {
+							padding: 0.3rem;
+						}
+
+						&-button {
+							border: none;
+						}
+
+						&-total:hover {
+							color: white;
+						}
+
+						&-upvote {
+							// Upvote label
+							span {
+								display: none;
+							}
+
+							.inline_icon {
+								top: -0.2em;
+								transform: scale(1.5);
+
+								path {
+									d: $upvote;
+								}
+
+								&:hover {
+									fill: $green;
+								}
+							}
+						}
+
+						&-downvote {
+							.inline_icon {
+								top: -0.18em;
+								transform: scale(1.5);
+
+								path {
+									d: $downvote;
+								}
+
+								&:hover {
+									fill: $red;
+								}
+							}
+						}
+					}
+				}
+
+				&-section .gray_container {
+					background: none;
+
+					// State label
+					> .text_label {
+						color: $accent;
+					}
+
+					// Show 10 More Lines button
+					expandable-diff {
+						.square_button {
+							border-top: 2px solid gray;
+							border-bottom: 2px solid gray;
+							border-left: none;
+							border-right: none;
+							margin: 1rem 0 1rem 0;
+							display: block;
+
+							&:hover {
+								background: none;
+							}
+
+							.text_label--gray {
+								color: white;
+
+								&:hover {
+									color: $accent;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

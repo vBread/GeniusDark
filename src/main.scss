@@ -1,0 +1,16 @@
+@import './variables';
+
+body {
+    background: $primary;
+    color: white;
+
+    &::-webkit-scrollbar {
+        background: $secondary;
+        width: 25px;
+
+        &-thumb {
+            background: white;
+            border: 0.35rem solid $secondary
+        }
+    }
+}

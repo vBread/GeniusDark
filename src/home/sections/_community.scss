@@ -1,0 +1,26 @@
+@import '../../variables';
+
+#community {
+    background: $primary;
+
+    // COMMUNITY header
+    .fEyCAH {
+        color: white;
+    }
+
+    // Hover color
+    .dUTFUv:hover {
+        background: $dark-primary;
+    }
+
+    // GET INVOLVED, LEARN HOW GENIUS WORKS, & LOAD MORE buttons
+    .gsoAZX {
+        border: $rect-border;
+        color: white;
+    }
+
+    // Leaderboard headers
+    .ljPCDr {
+        color: white
+    }
+}
