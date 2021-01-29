@@ -4,7 +4,7 @@
 	"description": "Dark mode theme for Genius",
 	"private": true,
 	"scripts": {
-		"build": "ts-node scripts/build.ts",
+		"build": "ts-node scripts/build.ts && prettier genius-dark.user.css -w",
 		"watch": "sass --no-source-map --watch src/:dist/"
 	},
 	"repository": {
@@ -19,6 +19,7 @@
 	},
 	"homepage": "https://github.com/vBread/Genius-Dark#readme",
 	"devDependencies": {
-		"@types/node": "^14.14.21"
+		"@types/node": "^14.14.21",
+		"prettier": "^2.2.1"
 	}
 }
