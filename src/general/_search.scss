@@ -1,0 +1,65 @@
+@import '../variables';
+@import '../mixins/scrollbar';
+
+.standalone_search {
+	@include scrollbar(#303030, 20px, 0.3rem);
+
+	.global_search-search_results {
+		background: $dark-secondary;
+
+		// Song results
+		.mini_card {
+			background: $dark-primary;
+
+			&:not(.mini_card--transparent):hover {
+				background: $primary-hover;
+			}
+
+			// Views icon
+			svg {
+				fill: white;
+			}
+
+			// Lyric matches
+			&-info > div:nth-child(2) > span {
+				color: $accent;
+			}
+		}
+
+		// Show more X button
+		.full_width_button {
+			color: white;
+			background: $dark-primary;
+		}
+
+		// Video and Article results
+		search-result-section {
+			&:nth-child(6),
+			&:nth-child(7) {
+				a,
+				.search_results_label {
+					display: none;
+				}
+			}
+		}
+
+		mini {
+			&-video,
+			&-article {
+				&-card {
+					display: none;
+				}
+			}
+		}
+
+		// Album results
+		.vertical_album_card {
+			color: white;
+			background: $dark-primary;
+
+			&:hover {
+				background: $primary-hover;
+			}
+		}
+	}
+}
