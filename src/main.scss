@@ -1,16 +1,9 @@
 @import './variables';
+@import './mixins/scrollbar';
 
 body {
-    background: $primary;
-    color: white;
+	@include scrollbar;
 
-    &::-webkit-scrollbar {
-        background: $secondary;
-        width: 25px;
-
-        &-thumb {
-            background: white;
-            border: 0.35rem solid $secondary
-        }
-    }
+	background: $primary;
+	color: white;
 }

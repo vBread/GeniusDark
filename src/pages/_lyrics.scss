@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins/scrollbar';
 
 .song_body {
 	background: $tertiary;
@@ -113,14 +114,8 @@
 		}
 
 		.suggestion {
-			&-list::-webkit-scrollbar {
-				background: #303030;
-				width: 20px;
-
-				&-thumb {
-					background: white;
-					border: 0.3rem solid #303030;
-				}
+			&-list {
+				@include scrollbar(#303030, 20px, 0.3rem);
 			}
 
 			&-item.selected {

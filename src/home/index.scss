@@ -6,6 +6,7 @@
 @import './header/opportunities';
 @import './sections/charts';
 @import './sections/community';
+@import '../mixins/scrollbar';
 @import '../variables';
 
 // LATEST section
@@ -70,6 +71,8 @@
 	// Notifications
 	inbox-container[inbox-name='main_activity_inbox'] {
 		.feed_dropdown {
+			@include scrollbar;
+
 			background: $primary;
 
 			&-header {
@@ -79,16 +82,6 @@
 
 				&:after {
 					content: 'NOTIFICATIONS';
-				}
-			}
-
-			&::-webkit-scrollbar {
-				background: $secondary;
-				width: 25px;
-
-				&-thumb {
-					background: white;
-					border: 0.35rem solid $secondary;
 				}
 			}
 		}

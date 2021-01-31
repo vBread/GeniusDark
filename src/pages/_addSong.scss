@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins/scrollbar';
 
 .act-new.cont-songs {
 	.add_song_page {
@@ -130,21 +131,13 @@
 
 					// Autocomplete results
 					&-results {
+						@include scrollbar(#303030, 20px, 0.3rem);
+
 						background: $dark-secondary;
 						color: white;
 
 						.highlighted {
 							background: $primary-hover;
-						}
-
-						&::-webkit-scrollbar {
-							background: #303030;
-							width: 20px;
-
-							&-thumb {
-								background: white;
-								border: 0.3rem solid #303030;
-							}
 						}
 					}
 				}

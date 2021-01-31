@@ -1,18 +1,11 @@
 @import '../../variables';
+@import '../../mixins/scrollbar';
 
 inbox-container[inbox-name='iq_inbox'],
 .standalone_inbox--embed {
+	@include scrollbar(#303030, 20px, 0.3rem);
+
 	background: $dark-primary;
-
-	&::-webkit-scrollbar {
-		background: #303030;
-		width: 20px;
-
-		&-thumb {
-			background: white;
-			border: 0.3rem solid #303030;
-		}
-	}
 
 	// Opportunity card
 	.contribution_opportunity {
