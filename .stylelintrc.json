@@ -1,0 +1,76 @@
+{
+	"extends": "stylelint-config-standard",
+	"plugins": [
+		"stylelint-scss",
+		"stylelint-order"
+	],
+	"rules": {
+		"at-rule-no-unknown": null,
+		"color-hex-case": "upper",
+		"color-hex-length": "long",
+		"color-named": "always-where-possible",
+		"declaration-block-no-duplicate-properties": true,
+		"declaration-block-no-redundant-longhand-properties": true,
+		"declaration-block-no-shorthand-property-overrides": true,
+		"font-family-name-quotes": "always-where-recommended",
+		"font-weight-notation": "named-where-possible",
+		"indentation": "tab",
+		"length-zero-no-unit": true,
+		"max-empty-lines": 1,
+		"number-leading-zero": "always",
+		"number-no-trailing-zeros": true,
+		"scss/at-import-no-partial-leading-underscore": true,
+		"scss/at-mixin-argumentless-call-parentheses": "never",
+		"scss/at-mixin-named-arguments": "never",
+		"scss/at-mixin-parentheses-space-before": "never",
+		"scss/comment-no-loud": true,
+		"scss/double-slash-comment-inline": "never",
+		"scss/function-color-relative": true,
+		"scss/selector-no-redundant-nesting-selector": true,
+		"scss/selector-no-union-class-name": null,
+		"selector-attribute-quotes": "always",
+		"selector-type-no-unknown": null,
+		"shorthand-property-no-redundant-values": true,
+		"string-quotes": "single",
+		"value-list-comma-space-after": "always-single-line",
+		"order/properties-order": [
+			{
+				"groupName": "Dimensions",
+				"properties": [
+					"height",
+					"width"
+				]
+			},
+			{
+				"properties": [
+					"fill",
+					"color",
+					"background",
+					"border"
+				]
+			},
+			{
+				"groupName": "Positioning",
+				"properties": [
+					"position",
+					"top",
+					"bottom",
+					"left",
+					"right",
+					"padding",
+					"margin"
+				]
+			},
+			{
+				"groupName": "Fonts",
+				"properties": [
+					"font",
+					"font-family",
+					"font-size",
+					"font-weight",
+					"line-height"
+				]
+			}
+		]
+	}
+}
