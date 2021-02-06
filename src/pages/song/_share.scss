@@ -1,0 +1,109 @@
+@import '../../global/variables';
+@import '../../global/mixins/icon';
+
+// Embed Copy button
+.ellipsis_menu-row {
+	.square_button {
+		border: none;
+
+		&:hover {
+			color: $green;
+			background: none;
+		}
+	}
+
+	&:nth-child(2) {
+		label {
+			display: none;
+		}
+
+		&::before {
+			content: 'WEBSITE:';
+			font-size: 0.875rem;
+			margin-right: 1.7em;
+		}
+	}
+}
+
+.share_buttons {
+	// Facebook
+	facebook-share-button {
+		.square_button {
+			border: none;
+
+			&--facebook {
+				background: none;
+			}
+		}
+
+		svg:hover {
+			fill: #3B5998;
+		}
+	}
+
+	// Twitter
+	twitter-share-button {
+		.square_button {
+			border: none;
+
+			&--twitter {
+				background: none;
+			}
+		}
+
+		svg:hover {
+			fill: #00ACEE;
+		}
+	}
+
+	// Embed
+	.square_button {
+		&--active:last-child {
+			color: $accent;
+			background: none;
+			border: none;
+		}
+
+		&:last-child {
+			border: none;
+
+			&:hover {
+				color: $accent;
+				background: none;
+			}
+		}
+	}
+
+	// Following
+	follow-button {
+		.square_button {
+			border: none;
+
+			&--active {
+				color: $accent;
+				background: none;
+			}
+
+			// If not following
+			&:hover {
+				color: $accent;
+				background: none;
+			}
+		}
+	}
+
+	// Pyong
+	pyong-button {
+		.square_button {
+			border: none;
+
+			&:hover {
+				background: none;
+			}
+
+			svg:hover {
+				fill: $genius-yellow;
+			}
+		}
+	}
+}

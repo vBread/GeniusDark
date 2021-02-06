@@ -1,0 +1,31 @@
+@mixin album-preview {
+	// Album info
+	.song_album-info {
+		&-title,
+		&-artist {
+			color: white;
+		}
+	}
+
+	// Album tracks
+	.track_listing-track {
+		// Track number
+		span {
+			color: scale-color(silver, $lightness: -25%);
+		}
+
+		// Current track
+		&--current span {
+			color: white;
+		}
+
+		a {
+			color: scale-color(silver, $lightness: -25%);
+
+			// Missing Lyrics label
+			span {
+				color: $accent;
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+@import '../../global/mixins/icon';
+
+// Cover Art Metadata
+.header_with_cover_art-metadata_preview--bottom_left {
+	bottom: -15px;
+
+	> div {
+		// Numbers
+		.text_label--gray {
+			color: silver;
+			font-size: 13px;
+		}
+
+		// Currently viewing
+		&:first-child {
+			@include icon($icon-viewing, 20px, 5px);
+		}
+
+		// Total views
+		&:nth-child(2) {
+			@include icon($icon-views, 20px, 5px);
+
+			margin: 0 1rem;
+		}
+
+		// Contributors
+		&:last-child {
+			@include icon($icon-contributors, 20px, 5px);
+
+			margin: initial;
+
+			> span {
+				border-bottom: none;
+			}
+
+			&::before {
+				top: 7px;
+			}
+		}
+	}
+}
+
+// Expanded Metadata
+.song_body .gray_container {
+	background: $dark-secondary;
+	margin-bottom: 1rem;
+
+	.song_metadata div {
+		&:first-child .metadata_with_icon {
+			&:first-child > span:first-child {
+				@include icon($icon-viewing, 15px);
+			}
+
+			&:last-child > span:first-child {
+				@include icon($icon-views, 15px);
+			}
+		}
+
+		&:last-child .metadata_with_icon {
+			&:first-child > span:first-child {
+				@include icon($icon-contributors, 15px);
+			}
+
+			&:last-child > span:first-child {
+				@include icon($icon-tags, 15px);
+			}
+		}
+	}
+
+	// Edit Metadata
+	.tiny_edit_button {
+		@include icon($icon-edit);
+
+		background: transparent;
+	}
+}
+
+// Music Video
+.bordered_media_container {
+	background: none;
+	border: none;
+	text-align: center;
+	padding-right: 0;
+	padding-left: 0.8rem;
+}

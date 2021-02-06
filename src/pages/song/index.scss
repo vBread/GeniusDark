@@ -1,0 +1,89 @@
+@import '../../global/variables';
+@import '../../global/mixins/scrollbar';
+@import '../../global/mixins/icon';
+@import '../../global/styles/buttons';
+@import '../../global/styles/voting';
+@import './metadata';
+@import './album';
+@import './facts';
+@import './inputs';
+@import './share';
+
+.song_body {
+	@include album-preview;
+	@include inputs;
+
+	color: white;
+	background: $tertiary;
+
+	// Lyrics
+	.lyrics {
+		margin-top: -1rem;
+
+		.referent {
+			background: $dark-tertiary;
+		}
+
+		// Editing
+		.wysiwyg_input {
+			background: $dark-secondary;
+		}
+
+		&_controls {
+			color: white;
+			background: $tertiary;
+		}
+
+		&-correct_line > .lyrics-correct_line-button.drop-target {
+			@include icon($icon-edit, 20px);
+
+			background: none;
+		}
+	}
+
+	.annotation_sidebar_unit {
+		background: $dark-tertiary;
+
+		.square_button--white_background {
+			background: $dark-tertiary;
+		}
+	}
+
+	.iq_pill {
+		color: $green;
+		margin-top: 0.52rem;
+	}
+
+	// More On Genius section
+	.u-xx_large_vertical_margins,
+	.react_song_page_preview_link {
+		display: none;
+	}
+}
+
+// Pyong tooltop
+span[ng-if*='pyonged'],
+// Apple music preview
+.apple_music_player_iframe_wrapper {
+	display: none;
+}
+
+// Correct line box
+.drop-content {
+	.tooltip {
+		color: white;
+		background: $secondary;
+		border: none;
+	}
+
+	textarea {
+		color: white;
+		background: $dark-secondary;
+		border: $dark-border;
+
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}

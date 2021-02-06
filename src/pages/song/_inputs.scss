@@ -1,0 +1,72 @@
+@mixin inputs {
+	// Song bio input
+	.wysiwyg_input {
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+
+		background: $dark-secondary;
+		border: $dark-border;
+	}
+
+	// Missing Track Info inputs
+	.tags_input {
+		.tags.focused {
+			box-shadow: none;
+			caret-color: white;
+		}
+
+		.input {
+			color: white;
+		}
+
+		// Autocomplete suggestions
+		.autocomplete {
+			background: $secondary;
+			box-shadow: none;
+		}
+
+		.suggestion {
+			&-list {
+				@include scrollbar(#303030, 20px, 0.3rem);
+			}
+
+			&-item.selected {
+				background: #303030;
+			}
+		}
+	}
+
+	// Release date input
+	.square_select_group-single {
+		position: relative;
+
+		&::before {
+			background: none;
+		}
+
+		// Dropdown arrow
+		&::after {
+			filter: invert(1);
+		}
+
+		select {
+			color: white;
+			background: $dark-primary;
+			border: $dark-border;
+		}
+	}
+
+	// Input
+	.square_input {
+		color: silver;
+		background: $primary;
+		border: $dark-border;
+
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
