@@ -1,0 +1,41 @@
+@import '../mixins/icon';
+
+.voting {
+	&-upvote,
+	&-downvote {
+		> svg {
+			display: none;
+		}
+	}
+
+	&-upvote {
+		@include icon($icon-upvote);
+
+		// Upvote label
+		> span {
+			display: none;
+		}
+
+		&:hover::before {
+			background: $green;
+			-webkit-mask: url($icon-upvote) no-repeat;
+		}
+	}
+
+	&-downvote {
+		@include icon($icon-downvote);
+
+		&:hover::before {
+			background: $red;
+			-webkit-mask: url($icon-downvote) no-repeat;
+		}
+	}
+
+	&-total {
+		padding: 0 7px 0 4px;
+	}
+
+	.square_button {
+		border: none;
+	}
+}

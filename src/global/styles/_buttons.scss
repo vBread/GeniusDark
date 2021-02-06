@@ -1,0 +1,95 @@
+@import '../variables';
+
+button {
+	&.square_button {
+		border: none;
+
+		&:hover {
+			background: none;
+		}
+
+		// Save
+		&--green:hover {
+			color: $green;
+		}
+	}
+
+	// Edit
+	&[title*='shift+e'],
+	&[title*='shift+l'] {
+		&:hover {
+			color: $accent;
+		}
+	}
+
+	// Pin/Unpin
+	&[ng-click*='pin_status'],
+	&[title*='shift+a'] {
+		padding-left: 12px;
+		border-left: $rect-border;
+
+		&:hover {
+			color: $accent;
+		}
+	}
+
+	// Save
+	&[title*='shift+enter']:hover {
+		color: $green;
+	}
+
+	// Cancel
+	&[ng-click*='cancel_correction'],
+	&[ng-click*='cancel_editing'],
+	&[tabindex='3'] {
+		padding-left: 10px;
+		border-left: $rect-border;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	// Submit
+	&[type='submit']:hover {
+		color: $green;
+	}
+}
+
+// Suggestion
+div[ng-if*='comments' i] {
+	@include icon($icon-comment);
+
+	border: none;
+}
+
+span {
+	// Cancel
+	&[ng-hide*='saving'] {
+		border: none;
+		padding-left: 10px;
+		border-left: $rect-border;
+
+		&:hover {
+			color: $red;
+			background: none;
+		}
+	}
+}
+
+pyong-button > div > span {
+	@include icon($icon-feed);
+}
+
+div {
+	// Show More
+	&[ng-click*='load_more()'] {
+		border: none;
+		padding: initial;
+
+		&:hover {
+			color: $accent;
+			background: none;
+		}
+	}
+}

@@ -2,8 +2,8 @@
 
 @mixin scrollbar($color: $secondary, $width: 25px, $border: 0.35rem) {
 	&::-webkit-scrollbar {
-		background: $color;
 		width: $width;
+		background: $color;
 
 		&-thumb {
 			background: white;
