@@ -1,0 +1,41 @@
+@import './forums';
+@import './notifications';
+@import './opportunities';
+@import '../../global/mixins/scrollbar';
+
+.feed_dropdown {
+	@include scrollbar(#252525, 20px, 0.3rem);
+
+	background: scale-color($primary, $lightness: 1);
+
+	&-header {
+		font-weight: bold;
+	}
+
+	&-item {
+		color: white;
+		border-top: 0.15rem solid #333333;
+
+		&:hover {
+			background: $primary-hover;
+		}
+
+		&--active {
+			background: $primary;
+		}
+
+		// Unread
+		&--unread {
+			background: scale-color($dark-secondary, $lightness: 2);
+			border-left: 2px solid white;
+
+			&::before {
+				display: none;
+			}
+
+			&:hover {
+				background: scale-color($dark-secondary, $lightness: 5);
+			}
+		}
+	}
+}

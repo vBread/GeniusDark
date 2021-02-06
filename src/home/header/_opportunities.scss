@@ -1,15 +1,9 @@
-@import '../../variables';
-@import '../../mixins/scrollbar';
+@import '../../global/variables';
 
-inbox-container[inbox-name='iq_inbox'],
-.standalone_inbox--embed {
-	@include scrollbar(#303030, 20px, 0.3rem);
-
-	background: $dark-primary;
-
+inbox-container[inbox-name='iq_inbox'] {
 	// Opportunity card
 	.contribution_opportunity {
-		background: $dark-secondary;
+		background: scale-color($dark-secondary, $lightness: 2);
 		box-shadow: none;
 
 		&-content {
@@ -26,14 +20,14 @@ inbox-container[inbox-name='iq_inbox'],
 
 				// Cancel hover
 				span:hover {
-					background: none;
 					color: $red;
+					background: none;
 				}
 
 				// Save hover
 				button:hover {
-					background: none;
 					color: $green;
+					background: none;
 				}
 			}
 
@@ -44,7 +38,7 @@ inbox-container[inbox-name='iq_inbox'],
 		}
 
 		&-actions {
-			background: darken($color: $dark-secondary, $amount: 2);
+			background: scale-color($dark-secondary, $lightness: 4);
 
 			// Open & Skip buttons
 			.u-text_right {
@@ -75,8 +69,8 @@ inbox-container[inbox-name='iq_inbox'],
 			// Edit button
 			.square_item_and_iq {
 				.square_button {
-					border: none;
 					color: white;
+					border: none;
 
 					&--green:hover {
 						color: $green;
@@ -94,9 +88,9 @@ inbox-container[inbox-name='iq_inbox'],
 
 	// Input
 	.square_input {
-		background: lighten($color: $dark-secondary, $amount: 2);
-		border: 0.15rem solid darken($color: $dark-tertiary, $amount: 3);
 		color: $green;
+		background: scale-color($dark-secondary, $lightness: 2);
+		border: 0.15rem solid scale-color($dark-tertiary, $darkness: 3);
 		caret-color: white;
 
 		&:active,
