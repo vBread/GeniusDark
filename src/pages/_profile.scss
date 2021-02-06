@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../global/variables';
 
 $corner: linear-gradient($secondary, $secondary);
 
@@ -32,8 +32,8 @@ $corner: linear-gradient($secondary, $secondary);
 
 // EDIT button
 .square_button {
-	border: $rect-border;
 	color: white;
+	border: $rect-border;
 
 	// Pencil icon
 	.inline_icon {

@@ -1,26 +1,26 @@
-@import '../../variables';
+@import '../../global/variables';
 
 #community {
-    background: $primary;
+	background: $primary;
 
-    // COMMUNITY header
-    .fEyCAH {
-        color: white;
-    }
+	// COMMUNITY header
+	.fEyCAH {
+		color: white;
+	}
 
-    // Hover color
-    .dUTFUv:hover {
-        background: $dark-primary;
-    }
+	// Hover color
+	.dUTFUv:hover {
+		background: $dark-primary;
+	}
 
-    // GET INVOLVED, LEARN HOW GENIUS WORKS, & LOAD MORE buttons
-    .gsoAZX {
-        border: $rect-border;
-        color: white;
-    }
+	// GET INVOLVED, LEARN HOW GENIUS WORKS, & LOAD MORE buttons
+	.gsoAZX {
+		color: white;
+		border: $rect-border;
+	}
 
-    // Leaderboard headers
-    .ljPCDr {
-        color: white
-    }
+	// Leaderboard headers
+	.ljPCDr {
+		color: white;
+	}
 }

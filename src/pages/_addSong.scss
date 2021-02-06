@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins/scrollbar';
+@import '../global/variables';
+@import '../global/mixins/scrollbar';
 
 .act-new.cont-songs {
 	.add_song_page {
@@ -11,10 +11,10 @@
 		&-section {
 			// Input boxes
 			.text_input {
+				color: white;
+				background: $dark-primary;
 				border: $dark-border;
 				border-radius: 0;
-				background: $dark-primary;
-				color: white;
 			}
 
 			// Possible Duplicates
@@ -48,21 +48,21 @@
 						position: relative;
 						right: 18px;
 
-						&:before {
-							position: relative;
+						&::before {
 							height: 12px;
 							width: 12px;
+							background: $dark-primary;
+							border: $dark-border;
+							position: relative;
 							top: 2px;
 							margin-right: 6px;
 							content: '';
 							display: inline-block;
-							background: $dark-primary;
-							border: $dark-border;
 							border-radius: 50%;
 						}
 					}
 
-					&:checked + label:before {
+					&:checked + label::before {
 						background: $accent;
 					}
 				}
@@ -77,30 +77,30 @@
 					position: relative;
 					right: 18px;
 
-					&:before {
-						position: relative;
+					&::before {
 						height: 12px;
 						width: 12px;
+						background: $dark-primary;
+						border: $dark-border;
+						position: relative;
 						top: 3px;
 						margin-right: 6px;
 						content: '';
 						display: inline-block;
-						background: $dark-primary;
-						border: $dark-border;
 					}
 				}
 
-				&:checked + label:before {
+				&:checked + label::before {
 					background: $accent;
 				}
 			}
 
 			// Add album input
 			.fields input {
+				color: white;
+				background: $dark-primary;
 				border: $dark-border;
 				border-radius: 0;
-				background: $dark-primary;
-				color: white;
 			}
 
 			// Extra tags
@@ -108,19 +108,19 @@
 				.chzn {
 					// Input
 					&-choices {
+						color: white;
+						background: $dark-primary;
 						border: $dark-border;
 						border-radius: 0;
-						background: $dark-primary;
-						color: white;
 
 						// Tag style
 						.search-choice {
+							color: white;
+							background: $dark-tertiary;
+							border: none;
 							position: relative;
 							top: 2px;
 							border-radius: 0;
-							background: $dark-tertiary;
-							color: white;
-							border: none;
 							box-shadow: none;
 						}
 					}
@@ -133,8 +133,8 @@
 					&-results {
 						@include scrollbar(#303030, 20px, 0.3rem);
 
-						background: $dark-secondary;
 						color: white;
+						background: $dark-secondary;
 
 						.highlighted {
 							background: $primary-hover;
@@ -149,9 +149,9 @@
 			position: relative;
 
 			select {
-				border: $dark-border;
-				background: $dark-primary;
 				color: white;
+				background: $dark-primary;
+				border: $dark-border;
 			}
 		}
 	}

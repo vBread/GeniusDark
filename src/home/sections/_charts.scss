@@ -1,66 +1,65 @@
-@import '../../variables';
+@import '../../global/variables';
 
 #top-songs {
-    background: $primary;
+	background: $primary;
 
-    // CHARTS header
-    .fEyCAH {
-        color: white;
-    }
+	// CHARTS header
+	.fEyCAH {
+		color: white;
+	}
 
-    // Hover color
-    .qsIlk:hover {
-        background: $dark-primary;
-    }
+	// Hover color
+	.qsIlk:hover {
+		background: $dark-primary;
+	}
 
-    // SONGS / ALL GENRES / TODAY dropdown
-    .dqbVnf {
-        border: $rect-border;
+	// Song views icon
+	.GcnrE svg {
+		fill: white;
+	}
 
-        .euenQK {
+	// SONGS / ALL GENRES / TODAY dropdown
+	.dqbVnf {
+		border: $rect-border;
 
-            // Dropdown text
-            > .lcnMaT {
-                color: white;
-            }
+		.euenQK {
+			// Dropdown text
+			> .lcnMaT {
+				color: white;
+			}
 
-            // Dropdown icon
-            > .cMZZs svg {
-                fill: white
-            }
+			// Dropdown icon
+			> .cMZZs svg {
+				fill: white;
+			}
 
-            background: $primary;
-        }
+			background: $primary;
+		}
 
-        // Dropdown content
-        .hnIVtc {
-            background: $primary;
+		// Dropdown content
+		.hnIVtc {
+			background: $primary;
 
-            // Dropdown table headers
-            .lcnMaT {
-                color: white
-            }
+			// Dropdown table headers
+			.lcnMaT {
+				color: white;
+			}
 
-            /* Selected icon */
-            .gIwQZZ .gMvRPT svg {
-                fill: white;
-            }
-        }
-    }
+			// Selected icon
+			.gIwQZZ .gMvRPT svg {
+				fill: white;
+			}
+		}
+	}
 
-    // Song views
-    .ljPCDr {
-        color: white;
-    }
+	// Song views
+	.ljPCDr {
+		color: white;
+	}
 
-    // Song views icon
-    .GcnrE svg {
-        fill: white;
-    }
-
-    // LOAD MORE button
-    .gsoAZX {
-        border: 2px solid white;
-        color: white;
-    }
+	// LOAD MORE button
+	.gsoAZX {
+		color: white;
+		border: 2px solid white;
+	}
 }

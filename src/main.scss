@@ -1,9 +1,9 @@
-@import './variables';
-@import './mixins/scrollbar';
+@import './global/variables';
+@import './global/mixins/scrollbar';
 
 body {
 	@include scrollbar;
 
-	background: $primary;
 	color: white;
+	background: $primary;
 }
