@@ -14,24 +14,24 @@
 	@include inputs;
 
 	color: white;
-	background: $tertiary;
+	background: #121212;
 
 	// Lyrics
 	.lyrics {
 		margin-top: -1rem;
 
 		.referent {
-			background: $dark-tertiary;
+			background: $color-secondary-light;
 		}
 
 		// Editing
 		.wysiwyg_input {
-			background: $dark-secondary;
+			background: $color-primary-dark;
 		}
 
 		&_controls {
 			color: white;
-			background: $tertiary;
+			background: #121212;
 		}
 
 		&-correct_line > .lyrics-correct_line-button.drop-target {
@@ -42,15 +42,15 @@
 	}
 
 	.annotation_sidebar_unit {
-		background: $dark-tertiary;
+		background: $color-secondary-light;
 
 		.square_button--white_background {
-			background: $dark-tertiary;
+			background: $color-secondary-light;
 		}
 	}
 
 	.iq_pill {
-		color: $green;
+		color: $color-generic-green;
 		margin-top: 0.52rem;
 	}
 
@@ -68,18 +68,18 @@ span[ng-if*='pyonged'],
 	display: none;
 }
 
-// Correct line box
+// Correct Line box
 .drop-content {
 	.tooltip {
 		color: white;
-		background: $secondary;
+		background: $color-primary-light;
 		border: none;
 	}
 
 	textarea {
 		color: white;
-		background: $dark-secondary;
-		border: $dark-border;
+		background: $color-primary-dark;
+		border: $style-border-dark;
 
 		&:active,
 		&:focus {

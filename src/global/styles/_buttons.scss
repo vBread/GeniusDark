@@ -10,7 +10,7 @@ button {
 
 		// Save
 		&--green:hover {
-			color: $green;
+			color: $color-generic-green;
 		}
 	}
 
@@ -18,7 +18,7 @@ button {
 	&[title*='shift+e'],
 	&[title*='shift+l'] {
 		&:hover {
-			color: $accent;
+			color: $color-generic-accent;
 		}
 	}
 
@@ -26,16 +26,16 @@ button {
 	&[ng-click*='pin_status'],
 	&[title*='shift+a'] {
 		padding-left: 12px;
-		border-left: $rect-border;
+		border-left: $style-border-separator;
 
 		&:hover {
-			color: $accent;
+			color: $color-generic-accent;
 		}
 	}
 
 	// Save
 	&[title*='shift+enter']:hover {
-		color: $green;
+		color: $color-generic-green;
 	}
 
 	// Cancel
@@ -43,24 +43,17 @@ button {
 	&[ng-click*='cancel_editing'],
 	&[tabindex='3'] {
 		padding-left: 10px;
-		border-left: $rect-border;
+		border-left: $style-border-separator;
 
 		&:hover {
-			color: $red;
+			color: $color-generic-red;
 		}
 	}
 
 	// Submit
 	&[type='submit']:hover {
-		color: $green;
+		color: $color-generic-green;
 	}
-}
-
-// Suggestion
-div[ng-if*='comments' i] {
-	@include icon($icon-comment);
-
-	border: none;
 }
 
 span {
@@ -68,17 +61,13 @@ span {
 	&[ng-hide*='saving'] {
 		border: none;
 		padding-left: 10px;
-		border-left: $rect-border;
+		border-left: $style-border-separator;
 
 		&:hover {
-			color: $red;
+			color: $color-generic-red;
 			background: none;
 		}
 	}
-}
-
-pyong-button > div > span {
-	@include icon($icon-feed);
 }
 
 div {
@@ -88,8 +77,66 @@ div {
 		padding: initial;
 
 		&:hover {
-			color: $accent;
+			color: $color-generic-accent;
 			background: none;
+		}
+	}
+}
+
+// About "x" box
+.u-float_right {
+	user-select: none;
+
+	> div {
+		// Suggestion
+		&[ng-if*='comments' i] {
+			@include icon($icon-comment, $hover: true);
+
+			background: none;
+			border: none;
+		}
+
+		// Report
+		&:nth-child(2) {
+			@include icon($icon-chevron-down, $hover: true);
+
+			background: none;
+			border: none;
+		}
+	}
+
+	div {
+		// Share
+		&:nth-of-type(2) {
+			@include icon($icon-share, $hover: true);
+
+			border: none;
+
+			&:hover {
+				color: $color-generic-accent;
+				background: none;
+			}
+		}
+
+		// Report
+		&:nth-of-type(3) {
+			@include icon($icon-chevron-down, $hover: true);
+
+			background: none;
+			border: none;
+		}
+	}
+
+	// Pyong
+	pyong-button .pyong_button {
+		border: none;
+
+		&:hover {
+			background: none;
+		}
+
+		> span:first-child {
+			@include icon($icon-feed, $hover: true);
 		}
 	}
 }

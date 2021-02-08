@@ -17,14 +17,14 @@ inbox-container[inbox-name='main_activity_inbox'] {
 		&-expanded_section {
 			// Song
 			.inbox_line_item_detail {
-				background: $primary;
+				background: $color-primary;
 
 				.mini_card {
-					background: $secondary;
-					border: 0.3rem solid $secondary;
+					background: $color-primary-light;
+					border: 0.3rem solid $color-primary-light;
 
 					&:hover {
-						background: $primary-hover;
+						background: $color-primary-hover;
 					}
 
 					// Views icon
@@ -37,14 +37,14 @@ inbox-container[inbox-name='main_activity_inbox'] {
 				.lyrics {
 					// Insertions
 					ins {
-						color: $green;
+						color: $color-generic-green;
 						background: none !important;
 						text-decoration: none;
 					}
 
 					// Deletions
 					del {
-						color: $red;
+						color: $color-generic-red;
 						background: none !important;
 						text-decoration: none;
 					}
@@ -53,12 +53,12 @@ inbox-container[inbox-name='main_activity_inbox'] {
 				// Annotation
 				.referent {
 					&_container {
-						background: $dark-secondary;
+						background: $color-primary-dark;
 					}
 
 					// Highlight
 					&--white {
-						background: $dark-tertiary;
+						background: $color-secondary-light;
 						box-shadow: none;
 					}
 				}
@@ -70,7 +70,7 @@ inbox-container[inbox-name='main_activity_inbox'] {
 						border: none;
 
 						&:hover {
-							color: $green;
+							color: $color-generic-green;
 							background: none;
 						}
 					}
@@ -85,7 +85,7 @@ inbox-container[inbox-name='main_activity_inbox'] {
 
 					// State label
 					> .text_label {
-						color: $accent;
+						color: $color-generic-accent;
 					}
 
 					// Show 10 More Lines button
@@ -106,7 +106,7 @@ inbox-container[inbox-name='main_activity_inbox'] {
 								color: white;
 
 								&:hover {
-									color: $accent;
+									color: $color-generic-accent;
 								}
 							}
 						}

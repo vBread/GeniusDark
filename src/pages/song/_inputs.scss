@@ -6,8 +6,8 @@
 			box-shadow: none;
 		}
 
-		background: $dark-secondary;
-		border: $dark-border;
+		background: $color-primary-dark;
+		border: $style-border-dark;
 	}
 
 	// Missing Track Info inputs
@@ -23,17 +23,17 @@
 
 		// Autocomplete suggestions
 		.autocomplete {
-			background: $secondary;
+			background: $color-primary-light;
 			box-shadow: none;
 		}
 
 		.suggestion {
 			&-list {
-				@include scrollbar(#303030, 20px, 0.3rem);
+				@include scrollbar($color-secondary, 20px, 0.3rem);
 			}
 
 			&-item.selected {
-				background: #303030;
+				background: $color-secondary;
 			}
 		}
 	}
@@ -53,16 +53,16 @@
 
 		select {
 			color: white;
-			background: $dark-primary;
-			border: $dark-border;
+			background: $color-secondary-dark;
+			border: $style-border-dark;
 		}
 	}
 
 	// Input
 	.square_input {
 		color: silver;
-		background: $primary;
-		border: $dark-border;
+		background: $color-primary;
+		border: $style-border-dark;
 
 		&:active,
 		&:focus {

@@ -2,17 +2,17 @@
 @import '../mixins/scrollbar';
 
 .standalone_search {
-	@include scrollbar(#303030, 20px, 0.3rem);
+	@include scrollbar($color-secondary, 20px, 0.3rem);
 
 	.global_search-search_results {
-		background: $dark-secondary;
+		background: $color-primary-dark;
 
 		// Song results
 		.mini_card {
-			background: $dark-primary;
+			background: $color-secondary-dark;
 
 			&:not(.mini_card--transparent):hover {
-				background: $primary-hover;
+				background: $color-primary-hover;
 			}
 
 			// Views icon
@@ -22,14 +22,14 @@
 
 			// Lyric matches
 			&-info > div:nth-child(2) > span {
-				color: $accent;
+				color: $color-generic-accent;
 			}
 		}
 
 		// Show more X button
 		.full_width_button {
 			color: white;
-			background: $dark-primary;
+			background: $color-secondary-dark;
 		}
 
 		// Video and Article results
@@ -55,10 +55,10 @@
 		// Album results
 		.vertical_album_card {
 			color: white;
-			background: $dark-primary;
+			background: $color-secondary-dark;
 
 			&:hover {
-				background: $primary-hover;
+				background: $color-primary-hover;
 			}
 		}
 	}

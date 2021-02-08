@@ -1,9 +1,8 @@
-@import '../../global/variables';
-
+contribution-opportunity,
 inbox-container[inbox-name='iq_inbox'] {
 	// Opportunity card
 	.contribution_opportunity {
-		background: scale-color($dark-secondary, $lightness: 2);
+		background: scale-color($dark-secondary, $lightness: 2%);
 		box-shadow: none;
 
 		&-content {
@@ -20,25 +19,25 @@ inbox-container[inbox-name='iq_inbox'] {
 
 				// Cancel hover
 				span:hover {
-					color: $red;
+					color: $color-generic-red;
 					background: none;
 				}
 
 				// Save hover
 				button:hover {
-					color: $green;
+					color: $color-generic-green;
 					background: none;
 				}
 			}
 
 			.iq_pill {
-				color: $green;
+				color: $color-generic-green;
 				margin-top: 0.52rem;
 			}
 		}
 
 		&-actions {
-			background: scale-color($dark-secondary, $lightness: 4);
+			background: scale-color($dark-secondary, $lightness: 4%);
 
 			// Open & Skip buttons
 			.u-text_right {
@@ -57,12 +56,12 @@ inbox-container[inbox-name='iq_inbox'] {
 
 				// Skip hover
 				span:hover {
-					color: $red;
+					color: $color-generic-red;
 				}
 
 				// Open hover
 				a:hover {
-					color: $green;
+					color: $color-generic-green;
 				}
 			}
 
@@ -73,14 +72,14 @@ inbox-container[inbox-name='iq_inbox'] {
 					border: none;
 
 					&--green:hover {
-						color: $green;
+						color: $color-generic-green;
 						background: none;
 					}
 				}
 
 				.iq_pill {
 					margin-top: 0.42rem;
-					color: $green;
+					color: $color-generic-green;
 				}
 			}
 		}
@@ -88,9 +87,9 @@ inbox-container[inbox-name='iq_inbox'] {
 
 	// Input
 	.square_input {
-		color: $green;
-		background: scale-color($dark-secondary, $lightness: 2);
-		border: 0.15rem solid scale-color($dark-tertiary, $darkness: 3);
+		color: $color-generic-green;
+		background: scale-color($dark-secondary, $lightness: 2%);
+		border: 0.15rem solid scale-color($dark-tertiary, $lightness: -3%);
 		caret-color: white;
 
 		&:active,

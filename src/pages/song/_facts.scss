@@ -1,20 +1,26 @@
-.modal_window-content {
-	background: $dark-primary;
+@import './inputs';
 
-	.square {
-		&_input {
-			color: white;
-			background: $dark-secondary;
-			border: $dark-border;
+.modal_window {
+	@include inputs;
+
+	&-content {
+		background: $color-secondary-dark;
+
+		.square {
+			&_input {
+				color: white;
+				background: $color-primary-dark;
+				border: $style-border-dark;
+			}
+
+			&_form-sub_section {
+				background: #2E2E2E;
+			}
 		}
 
-		&_form-sub_section {
-			background: #2E2E2E;
+		// Tags
+		.tag-item {
+			background: $color-secondary-light;
 		}
-	}
-
-	// Tags
-	.tag-item {
-		background: $dark-tertiary;
 	}
 }

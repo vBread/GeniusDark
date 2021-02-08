@@ -7,7 +7,7 @@
 		border: none;
 
 		&:hover {
-			color: $green;
+			color: $color-generic-green;
 			background: none;
 		}
 	}
@@ -59,7 +59,7 @@
 	// Embed
 	.square_button {
 		&--active:last-child {
-			color: $accent;
+			color: $color-generic-accent;
 			background: none;
 			border: none;
 		}
@@ -68,7 +68,7 @@
 			border: none;
 
 			&:hover {
-				color: $accent;
+				color: $color-generic-accent;
 				background: none;
 			}
 		}
@@ -80,13 +80,13 @@
 			border: none;
 
 			&--active {
-				color: $accent;
+				color: $color-generic-accent;
 				background: none;
 			}
 
 			// If not following
 			&:hover {
-				color: $accent;
+				color: $color-generic-accent;
 				background: none;
 			}
 		}

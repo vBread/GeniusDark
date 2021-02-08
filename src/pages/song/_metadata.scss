@@ -40,38 +40,50 @@
 	}
 }
 
-// Expanded Metadata
-.song_body .gray_container {
-	background: $dark-secondary;
-	margin-bottom: 1rem;
-
-	.song_metadata div {
-		&:first-child .metadata_with_icon {
-			&:first-child > span:first-child {
-				@include icon($icon-viewing, 15px);
-			}
-
-			&:last-child > span:first-child {
-				@include icon($icon-views, 15px);
-			}
-		}
-
-		&:last-child .metadata_with_icon {
-			&:first-child > span:first-child {
-				@include icon($icon-contributors, 15px);
-			}
-
-			&:last-child > span:first-child {
-				@include icon($icon-tags, 15px);
-			}
+.song_body {
+	// Quote
+	blockquote {
+		&::before {
+			top: 0.25rem;
+			left: -0.2em;
+			content: '\200b';
+			border-right: 3px solid darkgrey;
 		}
 	}
 
-	// Edit Metadata
-	.tiny_edit_button {
-		@include icon($icon-edit);
+	// Expanded Metadata
+	.gray_container {
+		background: $color-primary-dark;
+		margin-bottom: 1rem;
 
-		background: transparent;
+		.song_metadata div {
+			&:first-child .metadata_with_icon {
+				&:first-child > span:first-child {
+					@include icon($icon-viewing, 15px);
+				}
+
+				&:last-child > span:first-child {
+					@include icon($icon-views, 15px);
+				}
+			}
+
+			&:last-child .metadata_with_icon {
+				&:first-child > span:first-child {
+					@include icon($icon-contributors, 15px);
+				}
+
+				&:last-child > span:first-child {
+					@include icon($icon-tags, 15px);
+				}
+			}
+		}
+
+		// Edit Metadata
+		.tiny_edit_button {
+			@include icon($icon-edit);
+
+			background: transparent;
+		}
 	}
 }
 

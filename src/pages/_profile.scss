@@ -1,39 +1,9 @@
 @import '../global/variables';
 
-$corner: linear-gradient($secondary, $secondary);
-
-// Contribution
-.profile_contribution {
-	color: white;
-	background: $primary;
-	border-left: 3px solid #252525;
-}
-
-// Annotation contribution
-.standalone_annotation {
-	background: $dark-secondary;
-
-	// Annotated snippet
-	.referent {
-		background: $dark-tertiary;
-		box-shadow: none;
-	}
-}
-
-// Stats
-.statistics_panel {
-	background: $primary;
-
-	// Stats icons
-	.inline_icon {
-		fill: white;
-	}
-}
-
 // EDIT button
 .square_button {
 	color: white;
-	border: $rect-border;
+	border: $style-border-separator;
 
 	// Pencil icon
 	.inline_icon {
@@ -41,7 +11,127 @@ $corner: linear-gradient($secondary, $secondary);
 	}
 }
 
+profile-page {
+	// Edit Profile
+	.profile_identity_and_description-action_row .square_button {
+		@include icon($icon-edit);
+
+		border: none;
+	}
+
+	div[scroll-point] scrollable-data {
+		// Contribution dates
+		.text_label {
+			@include icon($icon-calendar);
+
+			color: white;
+			margin-top: 5px;
+		}
+
+		profile-contributions {
+			// Transcription contributions
+			&-transcriptions > a {
+				@include icon($icon-transcription, 20px, 12px);
+
+				&::before {
+					right: 5px;
+				}
+			}
+
+			// Annotation suggestions
+			&-comments > a {
+				@include icon($icon-comment, 20px, 12px);
+
+				&::before {
+					right: 5px;
+				}
+
+				// Content
+				.note_bubble {
+					background: $color-secondary-dark;
+					border-radius: 0;
+					margin-top: 0.5rem;
+
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Contribution
+.profile_contribution {
+	color: white;
+	background: $color-primary;
+	border-left: 3px solid $color-secondary-dark;
+}
+
+// Annotation contribution
+.standalone_annotation {
+	background: $color-primary-dark;
+
+	// Annotated snippet
+	.referent {
+		background: $color-secondary-light;
+		box-shadow: none;
+	}
+}
+
+// Stats
+.statistics_panel {
+	background: $color-primary;
+
+	statistics-panel-item {
+		// Annotations
+		&[label^='Ann'] .statistic_and_label-primary {
+			@include icon($icon-annotate);
+		}
+
+		// Suggestions
+		&[label^='S'] .statistic_and_label-primary {
+			@include icon($icon-comment);
+		}
+
+		// Transcriptions
+		&[label^='T'] .statistic_and_label-primary {
+			@include icon($icon-transcription);
+		}
+
+		// Questions
+		&[label^='Q'] .statistic_and_label-primary {
+			@include icon($icon-question);
+		}
+
+		// Answers
+		&[label^='Ans'] .statistic_and_label-primary {
+			@include icon($icon-save);
+		}
+
+		// Pyongs
+		&[label^='P'] .statistic_and_label-primary {
+			@include icon($icon-feed);
+		}
+	}
+}
+
+// Top Accomplishments
+paginated-accomplishments {
+	.leaderboard {
+		// Artists
+		&-row:not(.leaderboard-row--no_border) {
+			border-bottom: 0.15rem solid $color-secondary;
+		}
+
+		// Show More
+		&-load_more {
+			border-top: 0.15rem solid $color-secondary;
+		}
+	}
+}
+
 // Bio
 .white_container {
-	background: $primary;
+	background: $color-primary;
 }
