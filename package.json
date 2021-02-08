@@ -8,7 +8,7 @@
 		"lint:fix": "stylelint src --fix",
 		"style": "prettier src -w && npm run lint:fix",
 		"build": "ts-node scripts/build.ts && prettier genius-dark.user.css -w",
-		"watch": "sass --no-source-map --watch src/:dist/"
+		"watch": "sass --no-source-map --no-charset --watch src/:dist/"
 	},
 	"repository": {
 		"type": "git",
