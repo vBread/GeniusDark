@@ -1,4 +1,4 @@
-@mixin icon($icon, $size: 18px, $top: 2.5px) {
+@mixin icon($icon, $size: 18px, $top: 2.5px, $hover: false, $hover-color: $accent) {
 	svg {
 		display: none;
 	}
@@ -12,5 +12,12 @@
 		margin: 0 2px;
 		content: '';
 		display: inline-block;
+	}
+
+	@if $hover {
+		&:hover::before {
+			background: $hover-color;
+			-webkit-mask: url($icon) no-repeat;
+		}
 	}
 }

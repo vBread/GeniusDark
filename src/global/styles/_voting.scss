@@ -9,26 +9,16 @@
 	}
 
 	&-upvote {
-		@include icon($icon-upvote);
+		@include icon($icon-upvote, $hover: true, $hover-color: $green);
 
 		// Upvote label
 		> span {
 			display: none;
 		}
-
-		&:hover::before {
-			background: $green;
-			-webkit-mask: url($icon-upvote) no-repeat;
-		}
 	}
 
 	&-downvote {
-		@include icon($icon-downvote);
-
-		&:hover::before {
-			background: $red;
-			-webkit-mask: url($icon-downvote) no-repeat;
-		}
+		@include icon($icon-downvote, $hover: true, $hover-color: $red);
 	}
 
 	&-total {
