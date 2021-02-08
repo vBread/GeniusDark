@@ -1,7 +1,4 @@
 @import './header';
-@import './sections/charts';
-@import './sections/community';
-@import '../global/variables';
 
 // LATEST section
 .bBDcg,
@@ -12,80 +9,119 @@
 	display: none;
 }
 
-// Other page headers
-.header {
-	&-nav_menu,
-	&-primary {
-		background: $primary;
+#top-songs,
+#community {
+	background: $color-primary;
 
-		.logo_link::before {
-			background: url('https://imgur.com/C1A8Wdr.png') 0 0;
-		}
+	// Headers
+	.fEyCAH {
+		color: white;
 	}
 
-	&-action {
-		&-icon {
-			// Forums
-			&--groups_inbox::before {
-				background: url($icon-forums) no-repeat;
-			}
+	// Subheaders
+	.khEySD h3 {
+		color: $color-generic-accent;
+	}
 
-			// Feed
-			&--newsfeed_inbox::before {
-				background: url($icon-feed) no-repeat;
-			}
+	// Generic text
+	.ljPCDr {
+		color: white;
+	}
 
-			// Notifications
-			&--main_activity_inbox::before {
-				background: url($icon-notification) no-repeat;
-			}
+	// Buttons
+	.gsoAZX {
+		color: white;
+		border: none;
+		border-bottom: $style-border-separator;
 
-			// Messages
-			&--messages_inbox::before {
-				background: url($icon-messages) no-repeat;
-			}
-
-			// Earn IQ
-			&--iq_inbox::before {
-				background: url($icon-earn_iq) no-repeat;
-			}
-		}
-
-		&-label {
-			color: white;
+		&:hover {
+			background: $color-primary-hover;
 		}
 	}
 }
 
-// Homepage header
-#application {
-	// Logo
-	.jNXEyt svg {
-		fill: white;
-	}
-
-	// Main header
-	.dmNhEr,
-	.jjeDWE {
-		background: $primary;
-	}
-
-	// Menu labels
-	.gHwbnY {
-		.ljPCDr {
-			color: white;
+#top-songs {
+	.hliVmp {
+		// Currently viewing
+		.ixtWtE {
+			@include icon(
+				$icon-viewing-concurrent,
+				$hover: true,
+				$hover-color: $color-generic-accent
+			);
 		}
 
-		.dusnMI {
-			// Label icon
-			svg {
-				fill: white;
-			}
+		// Currently viewing numbers
+		.cdJbFg {
+			color: $color-generic-accent;
+		}
+	}
 
-			// Label text
-			.ljPCDr {
+	// SONGS / ALL GENRES / TODAY dropdown
+	.dqbVnf {
+		border: none;
+		line-height: initial;
+		border-bottom: $style-border-separator;
+
+		.euenQK {
+			// Dropdown text
+			> .lcnMaT {
 				color: white;
 			}
+
+			// Dropdown icon
+			> .cMZZs {
+				@include icon($icon-chevron-down, $top: 0);
+
+				&::before {
+					left: 5px;
+				}
+			}
+
+			background: $color-primary;
 		}
+
+		// Dropdown content
+		.hnIVtc {
+			background: $color-primary;
+
+			// Dropdown table headers
+			.lcnMaT {
+				color: white;
+			}
+
+			// Selected icon
+			.gIwQZZ .gMvRPT svg {
+				fill: white;
+			}
+		}
+	}
+
+	// Hover color
+	.qsIlk:hover {
+		background: $color-secondary-dark;
+	}
+
+	// Song views icon
+	.GcnrE {
+		@include icon($icon-views);
+
+		&::before {
+			right: 5px;
+		}
+	}
+}
+
+#community {
+	// IQ Earned Today
+	div[class*='iq' i] > .cdJbFg {
+		color: $color-generic-accent;
+		font-size: 1rem;
+		margin-right: 22%;
+	}
+
+	// Hover color
+	.dUTFUv:hover {
+		background: $color-secondary-dark;
 	}
 }
