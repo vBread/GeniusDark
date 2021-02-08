@@ -3,38 +3,151 @@
 @import './opportunities';
 @import '../../global/mixins/scrollbar';
 
-.feed_dropdown {
-	@include scrollbar(#252525, 20px, 0.3rem);
+.header {
+	&-nav_menu,
+	&-primary {
+		background: $color-primary;
 
-	background: scale-color($primary, $lightness: 1);
-
-	&-header {
-		font-weight: bold;
-	}
-
-	&-item {
-		color: white;
-		border-top: 0.15rem solid #333333;
-
-		&:hover {
-			background: $primary-hover;
+		// Logo
+		.logo_link::before {
+			background: url('https://imgur.com/C1A8Wdr.png') 0 0 no-repeat;
 		}
 
-		&--active {
-			background: $primary;
-		}
+		.feed_dropdown {
+			@include scrollbar($color-secondary-dark, 20px, 0.3rem);
 
-		// Unread
-		&--unread {
-			background: scale-color($dark-secondary, $lightness: 2);
-			border-left: 2px solid white;
+			background: scale-color($primary, $lightness: 1%);
 
-			&::before {
-				display: none;
+			&-header {
+				font-weight: bold;
 			}
 
-			&:hover {
-				background: scale-color($dark-secondary, $lightness: 5);
+			&-item {
+				color: white;
+				border-top: 0.15rem solid $color-secondary;
+
+				&:hover {
+					background: $color-primary-hover;
+				}
+
+				&--active {
+					background: $color-primary;
+				}
+
+				// Unread
+				&--unread {
+					background: scale-color($dark-secondary, $lightness: 2%);
+					border-left: 2px solid white;
+
+					&::before {
+						display: none;
+					}
+
+					&:hover {
+						background: scale-color($dark-secondary, $lightness: 5%);
+					}
+				}
+			}
+		}
+	}
+
+	&-action {
+		&:hover {
+			border-bottom: 3px solid $color-generic-accent;
+		}
+
+		&-icon {
+			// Forums
+			&--groups_inbox::before {
+				background: url($icon-forums) no-repeat;
+			}
+
+			// Feed
+			&--newsfeed_inbox::before {
+				background: url($icon-feed) no-repeat;
+			}
+
+			// Notifications
+			&--main_activity_inbox::before {
+				background: url($icon-notification) no-repeat;
+			}
+
+			// Messages
+			&--messages_inbox::before {
+				background: url($icon-messages) no-repeat;
+			}
+
+			// Earn IQ
+			&--iq_inbox::before {
+				background: url($icon-earn_iq) no-repeat;
+			}
+		}
+
+		// Match header labels with the homepage
+		&-label {
+			color: white;
+			line-height: 1.45;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+.standalone_inbox--embed {
+	@include scrollbar($color-secondary-dark, 20px, 0.3rem);
+}
+
+// Homepage header
+#application {
+	// Logo
+	.jNXEyt svg {
+		fill: white;
+	}
+
+	// Main header
+	.dmNhEr,
+	.jjeDWE {
+		background: $color-primary;
+	}
+
+	// Icons
+	.cuLMgZ .gHwbnY {
+		&:first-child .dusnMI {
+			@include icon($icon-forums, $top: 0);
+		}
+
+		&:nth-child(2) .dusnMI {
+			@include icon($icon-feed, $top: 0);
+		}
+
+		&:nth-child(3) .dusnMI {
+			@include icon($icon-notification, $top: 0);
+		}
+
+		&:nth-last-child(3) .dusnMI {
+			@include icon($icon-messages, $top: 0);
+		}
+
+		&:nth-last-child(2) .dusnMI {
+			@include icon($icon-earn_iq, $top: 0);
+		}
+
+		// Label text
+		.ljPCDr {
+			color: white;
+		}
+
+		// Account dropdown
+		&:last-child > div > .iuSLgK {
+			background: scale-color($primary, $lightness: 1%);
+
+			> *,
+			> div > span {
+				color: white;
+			}
+
+			a,
+			div:not(:first-child) {
+				border-top: $style-border-dark;
 			}
 		}
 	}
