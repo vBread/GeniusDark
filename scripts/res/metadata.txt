@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@author         Bread <developernamedbread@gmail.com>
 @name           Genius Dark
 @description	A modern dark mode theme for Genius
-@version        1.0.0
+@author         Bread <developernamedbread@gmail.com>
+@version        1.3.1
 @namespace      https://github.com/vBread
 @homepageURL    https://github.com/vBread/GeniusDark
 @updateURL    	https://github.com/vBread/GeniusDark/genius-dark.user.css
