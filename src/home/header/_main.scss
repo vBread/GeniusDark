@@ -1,48 +1,56 @@
+@mixin dropdown {
+	.feed_dropdown {
+		@include scrollbar($color-secondary-dark, 20px, 0.3rem);
+
+		background: scale-color($color-primary, $lightness: 1%);
+
+		&-header {
+			font-weight: bold;
+		}
+
+		&-item {
+			color: white;
+			border-top: 0.15rem solid $color-secondary;
+
+			&:hover {
+				background: $color-primary-hover;
+			}
+
+			&--active {
+				background: $color-primary;
+			}
+
+			// Unread
+			&--unread {
+				background: scale-color($color-primary-dark, $lightness: 2%);
+				border-left: 2px solid white;
+
+				&::before {
+					display: none;
+				}
+
+				&:hover {
+					background: scale-color($color-primary-dark, $lightness: 5%);
+				}
+			}
+		}
+	}
+}
+
+inbox[inbox-name='main_activity_inbox'] {
+	@include dropdown;
+}
+
 .header {
 	&-nav_menu,
 	&-primary {
+		@include dropdown;
+
 		background: $color-primary;
 
 		// Logo
 		.logo_link::before {
 			background: url('https://imgur.com/C1A8Wdr.png') 0 0 no-repeat;
-		}
-
-		.feed_dropdown {
-			@include scrollbar($color-secondary-dark, 20px, 0.3rem);
-
-			background: scale-color($color-primary, $lightness: 1%);
-
-			&-header {
-				font-weight: bold;
-			}
-
-			&-item {
-				color: white;
-				border-top: 0.15rem solid $color-secondary;
-
-				&:hover {
-					background: $color-primary-hover;
-				}
-
-				&--active {
-					background: $color-primary;
-				}
-
-				// Unread
-				&--unread {
-					background: scale-color($color-primary-dark, $lightness: 2%);
-					border-left: 2px solid white;
-
-					&::before {
-						display: none;
-					}
-
-					&:hover {
-						background: scale-color($color-primary-dark, $lightness: 5%);
-					}
-				}
-			}
 		}
 	}
 
