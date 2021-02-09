@@ -1,11 +1,30 @@
-import { execSync } from 'child_process';
-import { writeFileSync, readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
+import { resolve } from 'path';
+import { format } from 'prettier';
+import { renderSync } from 'sass';
+import { format as fmt } from 'util';
 
-(async () => {
-	execSync('rimraf dist && sass --no-source-map src/:dist/');
+(() => {
+	const { css } = renderSync({
+		indentType: 'tab',
+		indentWidth: 1,
+		outputStyle: 'expanded',
+		file: 'src/index.scss'
+	});
 
-	const meta = readFileSync(`${__dirname}/res/metadata.txt`).toString('utf8');
-	const css = meta.replace('%s', readFileSync(`${process.cwd()}/dist/index.css`).toString('utf8'));
+	const final = css
+		.toString('utf8')
+		.replace('@charset "UTF-8";', '')
+		.replace(/#3498db/gim, 'var(--color-generic-accent)');
 
-	writeFileSync(`${process.cwd()}/genius-dark.user.css`, css);
+	const meta = readFileSync(`${__dirname}/res/metadata.txt`);
+	const content = fmt(meta.toString('utf8'), final);
+
+	const rc = readFileSync(resolve(__dirname, '..', '.prettierrc'));
+	const options = JSON.parse(rc.toString('utf8'));
+
+	writeFileSync(
+		`${process.cwd()}/genius-dark.user.css`,
+		format(content, { parser: 'scss', ...options })
+	);
 })();
