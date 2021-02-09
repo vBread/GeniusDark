@@ -1,6 +1,3 @@
-@import '../../global/variables';
-@import '../../global/mixins/icon';
-
 // Embed Copy button
 .ellipsis_menu-row {
 	.square_button {
@@ -102,7 +99,7 @@
 			}
 
 			svg:hover {
-				fill: $genius-yellow;
+				fill: $color-generic-yellow;
 			}
 		}
 	}

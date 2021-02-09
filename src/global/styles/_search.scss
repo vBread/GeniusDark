@@ -1,6 +1,3 @@
-@import '../variables';
-@import '../mixins/scrollbar';
-
 .standalone_search {
 	@include scrollbar($color-secondary, 20px, 0.3rem);
 

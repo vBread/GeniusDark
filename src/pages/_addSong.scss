@@ -1,6 +1,3 @@
-@import '../global/variables';
-@import '../global/mixins/scrollbar';
-
 .act-new.cont-songs {
 	.add_song_page {
 		> h1,
@@ -21,7 +18,7 @@
 			.suggestions {
 				// Header
 				> h4 {
-					color: $accent !important;
+					color: $color-generic-accent !important;
 				}
 
 				// Song list percentage

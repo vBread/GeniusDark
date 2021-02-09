@@ -1,6 +1,4 @@
-@import '../variables';
-
-@mixin scrollbar($color: $secondary, $width: 25px, $border: 0.35rem) {
+@mixin scrollbar($color: $color-secondary, $width: 25px, $border: 0.35rem) {
 	&::-webkit-scrollbar {
 		width: $width;
 		background: $color;

@@ -1,4 +1,4 @@
-@mixin icon($icon, $size: 18px, $top: 2.5px, $hover: false, $hover-color: $accent) {
+@mixin icon($icon, $size: 18px, $top: 2.5px, $hover: false, $hover-color: $color-generic-accent) {
 	svg {
 		display: none;
 	}
