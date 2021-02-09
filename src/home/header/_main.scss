@@ -1,8 +1,3 @@
-@import './forums';
-@import './notifications';
-@import './opportunities';
-@import '../../global/mixins/scrollbar';
-
 .header {
 	&-nav_menu,
 	&-primary {
@@ -16,7 +11,7 @@
 		.feed_dropdown {
 			@include scrollbar($color-secondary-dark, 20px, 0.3rem);
 
-			background: scale-color($primary, $lightness: 1%);
+			background: scale-color($color-primary, $lightness: 1%);
 
 			&-header {
 				font-weight: bold;
@@ -36,7 +31,7 @@
 
 				// Unread
 				&--unread {
-					background: scale-color($dark-secondary, $lightness: 2%);
+					background: scale-color($color-primary-dark, $lightness: 2%);
 					border-left: 2px solid white;
 
 					&::before {
@@ -44,7 +39,7 @@
 					}
 
 					&:hover {
-						background: scale-color($dark-secondary, $lightness: 5%);
+						background: scale-color($color-primary-dark, $lightness: 5%);
 					}
 				}
 			}
@@ -138,7 +133,7 @@
 
 		// Account dropdown
 		&:last-child > div > .iuSLgK {
-			background: scale-color($primary, $lightness: 1%);
+			background: scale-color($color-primary, $lightness: 1%);
 
 			> *,
 			> div > span {

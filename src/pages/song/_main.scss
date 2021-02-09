@@ -1,12 +1,7 @@
-@import '../../global/variables';
-@import '../../global/mixins/scrollbar';
-@import '../../global/mixins/icon';
-@import '../../global/styles/buttons';
-@import '../../global/styles/voting';
-@import './metadata';
 @import './album';
 @import './facts';
 @import './inputs';
+@import './metadata';
 @import './share';
 
 .song_body {

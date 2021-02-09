@@ -1,4 +1,17 @@
+@import './global/variables';
+@import './global/mixins/icon';
+@import './global/mixins/scrollbar';
+@import './global/styles/buttons';
 @import './global/styles/search';
-@import './home';
-@import './pages';
-@import './main.scss';
+@import './global/styles/voting';
+@import './home/index';
+@import './pages/addSong';
+@import './pages/profile';
+@import './pages/song/main';
+
+body {
+	@include scrollbar;
+
+	color: white;
+	background: $color-primary;
+}
