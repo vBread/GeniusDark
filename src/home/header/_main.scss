@@ -55,7 +55,8 @@ inbox[inbox-name='main_activity_inbox'] {
 	}
 
 	&-action {
-		&:hover {
+		&:hover,
+		&.header-action--active {
 			border-bottom: 3px solid $color-generic-accent;
 		}
 
@@ -151,6 +152,10 @@ inbox[inbox-name='main_activity_inbox'] {
 			a,
 			div:not(:first-child) {
 				border-top: $style-border-dark;
+			}
+
+			.eJJKMv:hover {
+				background: $color-primary-hover;
 			}
 		}
 	}
