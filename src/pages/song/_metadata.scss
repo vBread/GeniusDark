@@ -12,6 +12,10 @@
 		// Currently viewing
 		&:first-child {
 			@include icon($icon-viewing, 20px, 5px);
+
+			span {
+				color: $color-generic-orange;
+			}
 		}
 
 		// Total views
