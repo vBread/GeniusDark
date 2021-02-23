@@ -21,6 +21,10 @@
 
 	&-total {
 		padding: 0 7px 0 4px;
+
+		&--positive {
+			color: $color-generic-green;
+		}
 	}
 
 	.square_button {
