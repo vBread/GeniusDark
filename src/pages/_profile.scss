@@ -1,20 +1,77 @@
-// EDIT button
-.square_button {
-	color: white;
-	border: $style-border-separator;
+// IQ Amount
+.profile_identity-name_iq_and_role_icon {
+	margin-bottom: 15px;
 
-	// Pencil icon
-	.inline_icon {
-		fill: white;
+	> span {
+		color: white;
+		background: none;
+		top: -1px;
+		padding: 4px 10px;
+		font-size: initial;
+		border-left: 3px solid white;
+		margin-left: 5px;
 	}
 }
 
 profile-page {
-	// Edit Profile
-	.profile_identity_and_description-action_row .square_button {
-		@include icon($icon-edit);
+	.profile_identity_and_description-action_row {
+		// Edit
+		div[ng-if*='edit'] {
+			@include icon($icon-edit, $top: 3.5px, $hover: true);
 
-		border: none;
+			color: white;
+			border: none;
+
+			&:hover {
+				background: none;
+			}
+		}
+
+		// Follow button
+		a[ng-click*='follow'] {
+			// Follow
+			&:not([class*='--active']) {
+				@include icon(
+					$icon-plus,
+					$top: 3.5px,
+					$hover: true,
+					$hover-color: $color-generic-green
+				);
+			}
+
+			// Unfollow
+			&[class*='--active'] {
+				@include icon(
+					$icon-minus,
+					$top: 3.5px,
+					$hover: true,
+					$hover-color: $color-generic-red
+				);
+
+				background: none;
+			}
+
+			border: none;
+
+			&:hover {
+				background: none;
+			}
+		}
+
+		// Message button
+		> div[ng-if*='message'] {
+			@include icon($icon-messages, $top: 3.5px, $hover: true);
+
+			border: none;
+
+			&:hover {
+				background: none;
+			}
+
+			&::before {
+				margin-right: 7px;
+			}
+		}
 	}
 
 	div[scroll-point] scrollable-data {
@@ -55,6 +112,72 @@ profile-page {
 					}
 				}
 			}
+
+			// Questions
+			&-questions > div {
+				@include icon($icon-question);
+
+				&::before {
+					right: 5px;
+				}
+			}
+
+			// Question answers
+			&-answers > div {
+				@include icon($icon-save);
+
+				&::before {
+					right: 6px;
+				}
+			}
+
+			&-answers,
+			&-questions {
+				> div > div {
+					> .u-bottom_margin {
+						margin-bottom: 0.5rem;
+					}
+
+					// Dropdown button
+					> div:nth-child(2) > question > li > div:nth-child(1) {
+						@include icon($icon-chevron-down);
+
+						border: none;
+
+						&:hover {
+							background: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Dropdown actions
+.drop-content {
+	span[ng-if*='$ctrl.question'],
+	span[ng-if*='answerApi.can_edit'] {
+		@include icon($icon-edit, $top: 0, $hover: true);
+
+		&::before {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			background: none;
+		}
+	}
+
+	span[ng-if*='answerApi.can_clear'] {
+		@include icon($icon-cancel, 20px, 0, $hover: true, $hover-color: $color-generic-red);
+
+		&::before {
+			margin-right: 8px;
+		}
+
+		&:hover {
+			background: none;
 		}
 	}
 }
@@ -74,6 +197,11 @@ profile-page {
 	.referent {
 		background: $color-secondary-light;
 		box-shadow: none;
+	}
+
+	// Song card
+	.mini_card-info:hover {
+		background: $color-primary-hover;
 	}
 }
 
