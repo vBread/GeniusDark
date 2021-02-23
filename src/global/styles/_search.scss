@@ -1,3 +1,4 @@
+.search_results_autocomplete_container > div,
 .standalone_search {
 	@include scrollbar($color-secondary, 20px, 0.3rem);
 
@@ -18,8 +19,14 @@
 			}
 
 			// Lyric matches
-			&-info > div:nth-child(2) > span {
-				color: $color-generic-accent;
+			&-info {
+				> .mini_card-lyric_excerpt > span {
+					color: $color-generic-accent;
+				}
+
+				> div:nth-child(2) > div > span {
+					@include icon($icon-views, 14px);
+				}
 			}
 		}
 
@@ -59,4 +66,9 @@
 			}
 		}
 	}
+}
+
+search-results > div:nth-child(1) {
+	background: scale-color($color-primary, $lightness: 1%);
+	border-bottom: $style-border-dark;
 }
