@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Genius Dark
-@description	A modern dark mode theme for Genius
-@author         Bread <developernamedbread@gmail.com>
-@version        1.3.1
+@description	{{description}}
+@author         {{{author}}}
+@version        {{version}}
 @namespace      https://github.com/vBread
 @homepageURL    https://github.com/vBread/GeniusDark
 @updateURL    	https://github.com/vBread/GeniusDark/genius-dark.user.css
@@ -12,5 +12,5 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https://genius\\.com\\/?(.+)?") {
-	%s
+	{{{css}}}
 }
