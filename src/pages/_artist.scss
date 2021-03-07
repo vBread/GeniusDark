@@ -1,0 +1,10 @@
+artist-songs-and-albums {
+	// Popular songs
+	.mini_card-info {
+		background: $color-secondary-dark;
+
+		div:nth-child(2) > div > span {
+			@include icon($icon-views, 15px, 4px);
+		}
+	}
+}
