@@ -1,3 +1,4 @@
+// Album tracklist metadata
 @mixin album-preview {
 	// Album info
 	.song_album-info {
@@ -26,6 +27,49 @@
 			span {
 				color: $color-generic-accent;
 			}
+		}
+	}
+}
+
+// Album page
+album-tracklist-row {
+	.chart_row {
+		&--light_border {
+			border-bottom: $style-border-dark;
+		}
+
+		&--full_bleed_left::before {
+			content: none;
+		}
+
+		&-content {
+			// Track title
+			&-title {
+				color: white;
+			}
+
+			// Missing metadata
+			div:first-child > song-missing-metadata > div {
+				> missing-metadata-form:nth-child(3) {
+					select {
+						color: white;
+						background: $color-secondary-dark;
+						border: $style-border-dark;
+					}
+				}
+			}
+		}
+
+		// Views icon – don't display for Missing Lyrics
+		&-metadata_element:not([ng-if*='incomplete']) {
+			@include icon($icon-views, 16px);
+		}
+
+		// Dropdown
+		&-expand {
+			@include icon($icon-chevron-down);
+
+			padding: 0.7rem;
 		}
 	}
 }
