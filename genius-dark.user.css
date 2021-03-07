@@ -13,6 +13,10 @@
 
 @-moz-document regexp("https://genius\\.com\\/?(.+)?")
 {
+	.square_button {
+		color: white;
+	}
+
 	button.square_button {
 		color: white;
 		border: none;
@@ -1232,6 +1236,24 @@
 	}
 	.act-new.cont-songs .ac_over {
 		background: #2c2c2c;
+	}
+
+	artist-songs-and-albums .mini_card-info {
+		background: #252525;
+	}
+	artist-songs-and-albums .mini_card-info div:nth-child(2) > div > span svg {
+		display: none;
+	}
+	artist-songs-and-albums .mini_card-info div:nth-child(2) > div > span::before {
+		height: 15px;
+		width: 15px;
+		background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCgkgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1NzYgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1NzYgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01NzIuNSwyNDEuNEM1MTguMywxMzUuNiw0MTAuOSw2NCwyODgsNjRTNTcuNywxMzUuNiwzLjUsMjQxLjRjLTQuNiw5LjItNC42LDIwLDAsMjkuMgoJQzU3LjcsMzc2LjQsMTY1LjEsNDQ4LDI4OCw0NDhzMjMwLjMtNzEuNiwyODQuNS0xNzcuNEM1NzcuMiwyNjEuNCw1NzcuMiwyNTAuNiw1NzIuNSwyNDEuNHogTTI4OCw0MDBjLTc5LjUsMC0xNDQtNjQuNS0xNDQtMTQ0CglzNjQuNS0xNDQsMTQ0LTE0NHMxNDQsNjQuNSwxNDQsMTQ0YzAsNzkuNS02NC40LDE0NC0xNDMuOSwxNDRDMjg4LjEsNDAwLDI4OCw0MDAsMjg4LDQwMHogTTI4OCwxNjBjLTguNiwwLjEtMTcuMSwxLjQtMjUuMywzLjgKCWMxNS43LDIxLjMsMTEuMSw1MS4yLTEwLjIsNjYuOWMtMTYuOSwxMi40LTM5LjksMTIuNC01Ni43LDBjLTEzLjksNTEuMSwxNi4zLDEwMy43LDY3LjMsMTE3LjVjNTEuMSwxMy45LDEwMy43LTE2LjMsMTE3LjUtNjcuMwoJYzEzLjktNTEuMS0xNi4zLTEwMy43LTY3LjMtMTE3LjVDMzA1LjEsMTYxLjEsMjk2LjUsMTYwLDI4OCwxNjB6Ii8+Cjwvc3ZnPgo=')
+			no-repeat;
+		position: relative;
+		top: 4px;
+		margin: 0 2px;
+		content: '';
+		display: inline-block;
 	}
 
 	.profile_identity-name_iq_and_role_icon {
