@@ -10,11 +10,11 @@ artist-songs-and-albums {
 
 	// BUTTON: Show all songs by {{artist}}
 	.full_width_button {
+		margin-top: 20px;
 		color: white;
 		background: transparent;
 		border-top: 2px solid gray;
 		border-bottom: 2px solid gray;
-		margin-top: 20px;
 
 		&:hover {
 			color: $color-generic-accent;
@@ -43,12 +43,12 @@ artist-songs-and-albums {
 				}
 
 				> .vertical_album_card-info {
+					display: none;
 					position: relative;
 					bottom: 27px;
 					left: 7px;
 					font-size: 15px;
 					text-align: left;
-					display: none;
 
 					// TEXT: {{album_title}}
 					> h3 {
@@ -57,26 +57,26 @@ artist-songs-and-albums {
 
 					// TEXT: {{year}}
 					> .vertical_album_card-release_date {
-						color: $color-generic-accent;
 						position: relative;
 						bottom: 32px;
+						color: $color-generic-accent;
 						font-size: 12px;
 					}
 				}
 
 				&:hover {
-					background: none !important;
 					margin-bottom: initial;
+					background: none !important;
 
 					// IMAGE: {{album_art}}
 					.cover_art::after {
+						content: '';
 						height: 100%;
 						width: 100%;
-						background: linear-gradient(transparent, #101010);
 						position: absolute;
 						top: 0;
 						left: 0;
-						content: '';
+						background: linear-gradient(transparent, #101010);
 					}
 
 					// TEXT: {{album_title}}

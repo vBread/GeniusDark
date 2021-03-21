@@ -1,13 +1,13 @@
 @mixin inputs {
 	// Song bio input
 	.wysiwyg_input {
+		background: $color-primary-dark;
+		border: $style-border-dark;
+
 		&:active,
 		&:focus {
 			box-shadow: none;
 		}
-
-		background: $color-primary-dark;
-		border: $style-border-dark;
 	}
 
 	// Missing Track Info inputs

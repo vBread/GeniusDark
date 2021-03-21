@@ -3,13 +3,13 @@
 	margin-bottom: 15px;
 
 	> span {
-		color: white;
-		background: none;
 		top: -1px;
 		padding: 4px 10px;
-		font-size: initial;
-		border-left: 3px solid white;
 		margin-left: 5px;
+		color: white;
+		background: none;
+		border-left: 3px solid white;
+		font-size: initial;
 	}
 }
 
@@ -29,6 +29,7 @@ profile-page {
 
 		// Follow button
 		a[ng-click*='follow'] {
+			border: none;
 			// Follow
 			&:not([class*='--active']) {
 				@include icon(
@@ -50,8 +51,6 @@ profile-page {
 
 				background: none;
 			}
-
-			border: none;
 
 			&:hover {
 				background: none;
@@ -79,8 +78,8 @@ profile-page {
 		.text_label {
 			@include icon($icon-calendar);
 
-			color: white;
 			margin-top: 5px;
+			color: white;
 		}
 
 		profile-contributions {
@@ -103,9 +102,9 @@ profile-page {
 
 				// Content
 				.note_bubble {
+					margin-top: 0.5rem;
 					background: $color-secondary-dark;
 					border-radius: 0;
-					margin-top: 0.5rem;
 
 					&::before {
 						display: none;

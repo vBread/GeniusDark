@@ -88,12 +88,12 @@ inbox-container[inbox-name='main_activity_inbox'] {
 					// Show 10 More Lines button
 					expandable-diff {
 						.square_button {
+							display: block;
+							margin: 1rem 0;
 							border-top: 2px solid gray;
 							border-bottom: 2px solid gray;
 							border-left: none;
 							border-right: none;
-							margin: 1rem 0;
-							display: block;
 
 							&:hover {
 								background: none;

@@ -1,23 +1,23 @@
 @mixin icon($icon, $size: 18px, $top: 2.5px, $hover: false, $hover-color: $color-generic-accent) {
-	svg {
-		display: none;
-	}
-
-	&::before {
-		height: $size;
-		width: $size;
-		background: url($icon) no-repeat;
-		position: relative;
-		top: $top;
-		margin: 0 2px;
-		content: '';
-		display: inline-block;
-	}
-
 	@if $hover {
 		&:hover::before {
 			background: $hover-color;
 			-webkit-mask: url($icon) no-repeat;
 		}
+	}
+
+	svg {
+		display: none;
+	}
+
+	&::before {
+		content: '';
+		display: inline-block;
+		height: $size;
+		width: $size;
+		position: relative;
+		top: $top;
+		margin: 0 2px;
+		background: url($icon) no-repeat;
 	}
 }

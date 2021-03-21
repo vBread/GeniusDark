@@ -62,10 +62,11 @@
 	// SONGS / ALL GENRES / TODAY dropdown
 	.dqbVnf {
 		border: none;
-		line-height: initial;
 		border-bottom: $style-border-separator;
+		line-height: initial;
 
 		.euenQK {
+			background: $color-primary;
 			// Dropdown text
 			> .lcnMaT {
 				color: white;
@@ -79,8 +80,6 @@
 					left: 5px;
 				}
 			}
-
-			background: $color-primary;
 		}
 
 		// Dropdown content
@@ -117,9 +116,9 @@
 #community {
 	// IQ Earned Today
 	div[class*='iq' i] > .cdJbFg {
+		margin-right: 22%;
 		color: $color-generic-accent;
 		font-size: 1rem;
-		margin-right: 22%;
 	}
 
 	// Hover color

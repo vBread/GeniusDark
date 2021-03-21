@@ -31,8 +31,8 @@ inbox-container[inbox-name='iq_inbox'] {
 			}
 
 			.iq_pill {
-				color: $color-generic-green;
 				margin-top: 0.52rem;
+				color: $color-generic-green;
 			}
 		}
 
@@ -45,8 +45,8 @@ inbox-container[inbox-name='iq_inbox'] {
 					border: none;
 
 					&--transparent {
-						padding: 0 0.7em;
 						transform: scale(1.2);
+						padding: 0 0.7em;
 					}
 
 					&--gray:hover {

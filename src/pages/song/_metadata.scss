@@ -46,17 +46,17 @@
 	// Quote
 	blockquote {
 		&::before {
+			content: '\200b';
 			top: 0.25rem;
 			left: -0.2em;
-			content: '\200b';
 			border-right: 3px solid darkgrey;
 		}
 	}
 
 	// Expanded Metadata
 	.gray_container {
-		background: $color-primary-dark;
 		margin-bottom: 1rem;
+		background: $color-primary-dark;
 
 		.song_metadata div {
 			&:first-child .metadata_with_icon {
@@ -91,9 +91,9 @@
 
 // Music Video
 .bordered_media_container {
+	padding-left: 0.8rem;
+	padding-right: 0;
 	background: none;
 	border: none;
 	text-align: center;
-	padding-right: 0;
-	padding-left: 0.8rem;
 }

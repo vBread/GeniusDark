@@ -67,8 +67,8 @@ button {
 span {
 	// Cancel
 	&[ng-hide*='saving'] {
-		border: none;
 		padding-left: 10px;
+		border: none;
 		border-left: $style-border-separator;
 
 		&:hover {
@@ -81,8 +81,8 @@ span {
 div {
 	// Show More
 	&[ng-click*='load_more()'] {
-		border: none;
 		padding: initial;
+		border: none;
 
 		&:hover {
 			color: $color-generic-accent;

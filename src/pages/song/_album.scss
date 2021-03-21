@@ -38,10 +38,10 @@ album-page {
 		&:first-child .cover_art-cta {
 			height: 100%;
 			width: 100%;
-			background: linear-gradient(#101010 1%, transparent);
 			position: absolute;
 			top: 0;
 			left: 0;
+			background: linear-gradient(#101010 1%, transparent);
 		}
 
 		&:nth-child(2) {
