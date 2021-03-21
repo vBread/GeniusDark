@@ -33,20 +33,38 @@
 		"shorthand-property-no-redundant-values": true,
 		"string-quotes": "single",
 		"value-list-comma-space-after": "always-single-line",
+		"order/order": [
+			"dollar-variables",
+			"at-rules",
+			"declarations",
+			"rules"
+		],
 		"order/properties-order": [
+			{
+				"groupName": "Display",
+				"properties": [
+					"content",
+					"display",
+					"cursor",
+					"overflow",
+					"overflow-x",
+					"overflow-y",
+					"opacity",
+					"visibility",
+					"transform",
+					"transition",
+					"z-index"
+				]
+			},
 			{
 				"groupName": "Dimensions",
 				"properties": [
 					"height",
-					"width"
-				]
-			},
-			{
-				"properties": [
-					"fill",
-					"color",
-					"background",
-					"border"
+					"max-height",
+					"min-height",
+					"width",
+					"max-width",
+					"min-width"
 				]
 			},
 			{
@@ -58,17 +76,31 @@
 					"left",
 					"right",
 					"padding",
-					"margin"
+					"padding-top",
+					"padding-bottom",
+					"padding-left",
+					"padding-right",
+					"margin",
+					"margin-top",
+					"margin-bottom",
+					"margin-left",
+					"margin-right"
 				]
 			},
 			{
-				"groupName": "Fonts",
+				"groupName": "Coloring",
 				"properties": [
-					"font",
-					"font-family",
-					"font-size",
-					"font-weight",
-					"line-height"
+					"fill",
+					"color",
+					"background",
+					"border",
+					"border-radius",
+					"border-top",
+					"border-bottom",
+					"border-left",
+					"border-right",
+					"outline",
+					"box-shadow"
 				]
 			}
 		]
