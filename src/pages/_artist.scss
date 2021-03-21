@@ -1,10 +1,90 @@
 artist-songs-and-albums {
-	// Popular songs
+	// LAYOUT: POPULAR {{ARTIST}} SONGS
 	.mini_card-info {
 		background: $color-secondary-dark;
 
 		div:nth-child(2) > div > span {
 			@include icon($icon-views, 15px, 4px);
+		}
+	}
+
+	// BUTTON: Show all songs by {{artist}}
+	.full_width_button {
+		background: transparent;
+		border-top: 2px solid gray;
+		border-bottom: 2px solid gray;
+		color: white;
+		margin-top: 20px;
+
+		&:hover {
+			background: none;
+			color: $color-generic-accent;
+		}
+	}
+
+	// LAYOUT: POPULAR {{ARTIST}} ALBUMS
+	> album-grid {
+		// BUTTON: Show all albums by {{artist}}
+		.full_width_button {
+			@extend .full_width_button;
+			margin-top: -10px;
+		}
+
+		.thumbnail_grid-grid_element {
+			margin-bottom: initial;
+
+			> vertical-album-card > .vertical_album_card {
+				padding: initial !important;
+				margin-bottom: 20px;
+
+				&--active {
+					box-shadow: none;
+				}
+
+				> .vertical_album_card-info {
+					position: relative;
+					bottom: 27px;
+					left: 7px;
+					font-size: 15px;
+					text-align: left;
+					display: none;
+
+					// TEXT: {{album_title}}
+					> h3 {
+						color: white;
+					}
+
+					// TEXT: {{year}}
+					> .vertical_album_card-release_date {
+						color: $color-generic-accent;
+						position: relative;
+						bottom: 32px;
+						font-size: 12px;
+					}
+				}
+
+				&:hover {
+					background: none !important;
+					margin-bottom: initial;
+
+					// IMAGE: {{album_art}}
+					.cover_art::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						background: linear-gradient(transparent, #101010);
+					}
+
+					// TEXT: {{album_title}}
+					.vertical_album_card-info {
+						display: block;
+						margin-bottom: -20px;
+					}
+				}
+			}
 		}
 	}
 }
