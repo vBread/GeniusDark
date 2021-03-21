@@ -24,15 +24,15 @@
 	"homepage": "https://github.com/vBread/Genius-Dark#readme",
 	"devDependencies": {
 		"@types/mustache": "^4.1.1",
-		"@types/node": "^14.14.32",
-		"@types/prettier": "^2.2.2",
+		"@types/node": "^14.14.35",
+		"@types/prettier": "^2.2.3",
 		"@types/sass": "^1.16.0",
 		"mustache": "^4.1.0",
 		"prettier": "^2.2.1",
-		"sass": "^1.32.6",
-		"stylelint": "^13.9.0",
-		"stylelint-config-standard": "^20.0.0",
+		"sass": "^1.32.8",
+		"stylelint": "^13.12.0",
+		"stylelint-config-standard": "^21.0.0",
 		"stylelint-order": "^4.1.0",
-		"stylelint-scss": "^3.18.0"
+		"stylelint-scss": "^3.19.0"
 	}
 }
