@@ -1,5 +1,10 @@
 .square_button {
 	color: white;
+	border: none;
+
+	&:hover {
+		background: none;
+	}
 }
 
 button {
