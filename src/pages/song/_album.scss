@@ -31,6 +31,29 @@
 	}
 }
 
+album-page {
+	.header_with_cover_art-cover_art .cover_art {
+		outline-color: gray;
+
+		&:first-child .cover_art-cta {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(#101010 1%, transparent);
+		}
+
+		&:nth-child(2) {
+			transform: translate3d(-0.7rem, -0.7rem, 0);
+		}
+
+		&:nth-child(3) {
+			transform: translate3d(-1.4rem, -1.4rem, 0);
+		}
+	}
+}
+
 // Album page
 album-tracklist-row {
 	.chart_row {
