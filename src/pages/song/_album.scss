@@ -32,25 +32,35 @@
 }
 
 album-page {
-	.header_with_cover_art-cover_art .cover_art {
-		outline-color: gray;
+	.header_with_cover_art {
+		&-cover_art .cover_art {
+			outline-color: gray;
 
-		&:first-child .cover_art-cta {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			background: linear-gradient(#101010 1%, transparent);
+			&:first-child .cover_art-cta {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: linear-gradient(#101010 1%, transparent);
+			}
+
+			&:nth-child(2) {
+				transform: translate3d(-0.7rem, -0.7rem, 0);
+			}
+
+			&:nth-child(3) {
+				transform: translate3d(-1.4rem, -1.4rem, 0);
+			}
 		}
 
-		&:nth-child(2) {
-			transform: translate3d(-0.7rem, -0.7rem, 0);
+		&[style*='default_cover_art'] {
+			background-image: url($image-banner-placeholder) !important;
 		}
+	}
 
-		&:nth-child(3) {
-			transform: translate3d(-1.4rem, -1.4rem, 0);
-		}
+	.cover_art-image[src*='default_cover_art'] {
+		content: url($image-cover-placeholder);
 	}
 }
 
