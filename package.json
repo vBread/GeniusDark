@@ -4,12 +4,12 @@
 	"description": "A modern dark mode theme for Genius",
 	"private": true,
 	"scripts": {
+		"start": "nodemon --watch src --exec \"npm run build:prod\" -e scss",
 		"lint": "stylelint src",
 		"lint:fix": "stylelint src --fix",
 		"style": "prettier src -w && npm run lint:fix",
 		"build:dev": "sass --no-charset src/:dist/",
-		"build:prod": "ts-node scripts/build.ts && prettier genius-dark.user.css -w",
-		"watch": "sass --no-source-map --no-charset --watch src/:dist/"
+		"build:prod": "ts-node scripts/build.ts && prettier genius-dark.user.css -w"
 	},
 	"repository": {
 		"type": "git",

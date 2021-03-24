@@ -12,9 +12,17 @@ import { author, description, version } from '../package.json';
 	});
 
 	let css = compiled.css
-		.toString('utf8')
+		.toString('utf-8')
 		.replace('@charset "UTF-8";', '')
-		.replace(/#3498db/gim, 'var(--color-generic-accent)');
+		.replace(/#3498db/gim, 'var(--color-generic-accent)')
+		.replace(/url\("(\/.+\.(\w{3}))"\)/gm, (_, path, extension) => {
+			const base64 = readFileSync(process.cwd() + path).toString('base64');
+			const prefix = `data:image/${
+				extension === 'jpg' ? 'jpeg' : `${extension}+xml`
+			};base64,`;
+
+			return `url("${prefix + base64}")`;
+		});
 
 	const meta = readFileSync(`${__dirname}/res/metadata.txt`);
 	css = render(meta.toString('utf8'), { author, description, version, css });
