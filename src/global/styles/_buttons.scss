@@ -144,7 +144,7 @@ div {
 		}
 
 		> span:first-child {
-			@include icon($icon-feed, $hover: true);
+			@include icon($icon-hashtag, $hover: true);
 		}
 	}
 }

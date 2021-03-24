@@ -95,7 +95,7 @@ album-tracklist-row {
 
 		// Views icon – don't display for Missing Lyrics
 		&-metadata_element:not([ng-if*='incomplete']) {
-			@include icon($icon-views, 16px);
+			@include icon($icon-eye, 16px);
 		}
 
 		// Dropdown

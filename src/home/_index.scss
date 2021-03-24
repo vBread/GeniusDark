@@ -47,7 +47,7 @@
 		// Currently viewing
 		.ixtWtE {
 			@include icon(
-				$icon-viewing-concurrent,
+				$icon-fire,
 				$hover: true,
 				$hover-color: $color-generic-accent
 			);
@@ -105,7 +105,7 @@
 
 	// Song views icon
 	.GcnrE {
-		@include icon($icon-views);
+		@include icon($icon-eye);
 
 		&::before {
 			right: 5px;

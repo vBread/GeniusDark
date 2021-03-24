@@ -11,7 +11,7 @@
 
 		// Currently viewing
 		&:first-child {
-			@include icon($icon-viewing, 20px, 5px);
+			@include icon($icon-fire, 20px, 5px);
 
 			span {
 				color: $color-generic-orange;
@@ -20,14 +20,14 @@
 
 		// Total views
 		&:nth-child(2) {
-			@include icon($icon-views, 20px, 5px);
+			@include icon($icon-eye, 20px, 5px);
 
 			margin: 0 1rem;
 		}
 
 		// Contributors
 		&:last-child {
-			@include icon($icon-contributors, 20px, 5px);
+			@include icon($icon-people, 20px, 5px);
 
 			margin: initial;
 
@@ -61,28 +61,28 @@
 		.song_metadata div {
 			&:first-child .metadata_with_icon {
 				&:first-child > span:first-child {
-					@include icon($icon-viewing, 15px);
+					@include icon($icon-fire, 15px);
 				}
 
 				&:last-child > span:first-child {
-					@include icon($icon-views, 15px);
+					@include icon($icon-eye, 15px);
 				}
 			}
 
 			&:last-child .metadata_with_icon {
 				&:first-child > span:first-child {
-					@include icon($icon-contributors, 15px);
+					@include icon($icon-people, 15px);
 				}
 
 				&:last-child > span:first-child {
-					@include icon($icon-tags, 15px);
+					@include icon($icon-tag, 15px);
 				}
 			}
 		}
 
 		// Edit Metadata
 		.tiny_edit_button {
-			@include icon($icon-edit);
+			@include icon($icon-pencil);
 
 			background: transparent;
 		}

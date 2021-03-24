@@ -7,7 +7,7 @@
 	}
 
 	&-upvote {
-		@include icon($icon-upvote, $hover: true, $hover-color: $color-generic-green);
+		@include icon($icon-arrow-up, $hover: true, $hover-color: $color-generic-green);
 
 		// Upvote label
 		> span {
@@ -16,7 +16,7 @@
 	}
 
 	&-downvote {
-		@include icon($icon-downvote, $hover: true, $hover-color: $color-generic-red);
+		@include icon($icon-arrow-down, $hover: true, $hover-color: $color-generic-red);
 	}
 
 	&-total {

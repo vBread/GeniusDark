@@ -63,27 +63,27 @@ inbox[inbox-name='main_activity_inbox'] {
 		&-icon {
 			// Forums
 			&--groups_inbox::before {
-				background: url($icon-forums) no-repeat;
+				background: url($icon-discussion) no-repeat;
 			}
 
 			// Feed
 			&--newsfeed_inbox::before {
-				background: url($icon-feed) no-repeat;
+				background: url($icon-hashtag) no-repeat;
 			}
 
 			// Notifications
 			&--main_activity_inbox::before {
-				background: url($icon-notification) no-repeat;
+				background: url($icon-notifications) no-repeat;
 			}
 
 			// Messages
 			&--messages_inbox::before {
-				background: url($icon-messages) no-repeat;
+				background: url($icon-inbox) no-repeat;
 			}
 
 			// Earn IQ
 			&--iq_inbox::before {
-				background: url($icon-earn_iq) no-repeat;
+				background: url($icon-plus) no-repeat;
 			}
 		}
 
@@ -116,23 +116,23 @@ inbox[inbox-name='main_activity_inbox'] {
 	// Icons
 	.cuLMgZ .gHwbnY {
 		&:first-child .dusnMI {
-			@include icon($icon-forums, $top: 0);
+			@include icon($icon-discussion, $top: 0);
 		}
 
 		&:nth-child(2) .dusnMI {
-			@include icon($icon-feed, $top: 0);
+			@include icon($icon-hashtag, $top: 0);
 		}
 
 		&:nth-child(3) .dusnMI {
-			@include icon($icon-notification, $top: 0);
+			@include icon($icon-notifications, $top: 0);
 		}
 
 		&:nth-last-child(3) .dusnMI {
-			@include icon($icon-messages, $top: 0);
+			@include icon($icon-inbox, $top: 0);
 		}
 
 		&:nth-last-child(2) .dusnMI {
-			@include icon($icon-earn_iq, $top: 0);
+			@include icon($icon-plus, $top: 0);
 		}
 
 		// Label text

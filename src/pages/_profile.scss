@@ -17,7 +17,7 @@ profile-page {
 	.profile_identity_and_description-action_row {
 		// Edit
 		div[ng-if*='edit'] {
-			@include icon($icon-edit, $top: 3.5px, $hover: true);
+			@include icon($icon-pencil, $top: 3.5px, $hover: true);
 
 			color: white;
 			border: none;
@@ -59,7 +59,7 @@ profile-page {
 
 		// Message button
 		> div[ng-if*='message'] {
-			@include icon($icon-messages, $top: 3.5px, $hover: true);
+			@include icon($icon-inbox, $top: 3.5px, $hover: true);
 
 			border: none;
 
@@ -123,7 +123,7 @@ profile-page {
 
 			// Question answers
 			&-answers > div {
-				@include icon($icon-save);
+				@include icon($icon-checkmark);
 
 				&::before {
 					right: 6px;
@@ -157,7 +157,7 @@ profile-page {
 .drop-content {
 	span[ng-if*='$ctrl.question'],
 	span[ng-if*='answerApi.can_edit'] {
-		@include icon($icon-edit, $top: 0, $hover: true);
+		@include icon($icon-pencil, $top: 0, $hover: true);
 
 		&::before {
 			margin-right: 10px;
@@ -169,7 +169,7 @@ profile-page {
 	}
 
 	span[ng-if*='answerApi.can_clear'] {
-		@include icon($icon-cancel, 20px, 0, $hover: true, $hover-color: $color-generic-red);
+		@include icon($icon-crossmark, 20px, 0, $hover: true, $hover-color: $color-generic-red);
 
 		&::before {
 			margin-right: 8px;
@@ -211,7 +211,7 @@ profile-page {
 	statistics-panel-item {
 		// Annotations
 		&[label^='Ann'] .statistic_and_label-primary {
-			@include icon($icon-annotate);
+			@include icon($icon-comment);
 		}
 
 		// Suggestions
@@ -231,12 +231,12 @@ profile-page {
 
 		// Answers
 		&[label^='Ans'] .statistic_and_label-primary {
-			@include icon($icon-save);
+			@include icon($icon-checkmark);
 		}
 
 		// Pyongs
 		&[label^='P'] .statistic_and_label-primary {
-			@include icon($icon-feed);
+			@include icon($icon-hashtag);
 		}
 	}
 }
