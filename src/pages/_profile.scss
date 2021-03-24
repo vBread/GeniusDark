@@ -59,7 +59,7 @@ profile-page {
 
 		// Message button
 		> div[ng-if*='message'] {
-			@include icon($icon-inbox, $top: 3.5px, $hover: true);
+			@include icon($icon-message, $top: 3.5px, $hover: true);
 
 			border: none;
 
