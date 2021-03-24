@@ -30,7 +30,7 @@
 		}
 
 		&-correct_line > .lyrics-correct_line-button.drop-target {
-			@include icon($icon-edit, 20px);
+			@include icon($icon-pencil, 20px);
 
 			background: none;
 		}
