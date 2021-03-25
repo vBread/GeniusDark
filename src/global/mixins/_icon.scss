@@ -1,6 +1,15 @@
-@mixin icon($icon, $size: 18px, $top: 2.5px, $hover: false, $hover-color: $color-generic-accent) {
+@mixin icon(
+	$icon,
+	$color: white,
+	$size: 16px,
+	$scale: 1.125,
+	$top: 2.5px,
+	$psuedo: before,
+	$hover: false,
+	$hover-color: $color-generic-accent
+) {
 	@if $hover {
-		&:hover::before {
+		&:hover::#{$psuedo} {
 			background: $hover-color;
 			-webkit-mask: url($icon) no-repeat;
 		}
@@ -10,14 +19,16 @@
 		display: none;
 	}
 
-	&::before {
+	&::#{$psuedo} {
 		content: '';
 		display: inline-block;
+		transform: scale($scale);
 		height: $size;
 		width: $size;
 		position: relative;
 		top: $top;
 		margin: 0 2px;
-		background: url($icon) no-repeat;
+		background: $color;
+		-webkit-mask: url($icon) no-repeat;
 	}
 }

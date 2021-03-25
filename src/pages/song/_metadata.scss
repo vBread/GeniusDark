@@ -11,7 +11,7 @@
 
 		// Currently viewing
 		&:first-child {
-			@include icon($icon-fire, 20px, 5px);
+			@include icon($icon-clock, $scale: 1);
 
 			span {
 				color: $color-generic-orange;
@@ -20,23 +20,19 @@
 
 		// Total views
 		&:nth-child(2) {
-			@include icon($icon-eye, 20px, 5px);
+			@include icon($icon-eye);
 
 			margin: 0 1rem;
 		}
 
 		// Contributors
 		&:last-child {
-			@include icon($icon-people, 20px, 5px);
+			@include icon($icon-people);
 
 			margin: initial;
 
 			> span {
 				border-bottom: none;
-			}
-
-			&::before {
-				top: 7px;
 			}
 		}
 	}
@@ -61,21 +57,21 @@
 		.song_metadata div {
 			&:first-child .metadata_with_icon {
 				&:first-child > span:first-child {
-					@include icon($icon-fire, 15px);
+					@include icon($icon-clock, $top: 0);
 				}
 
 				&:last-child > span:first-child {
-					@include icon($icon-eye, 15px);
+					@include icon($icon-eye, $top: 0);
 				}
 			}
 
 			&:last-child .metadata_with_icon {
 				&:first-child > span:first-child {
-					@include icon($icon-people, 15px);
+					@include icon($icon-people, $top: 0);
 				}
 
 				&:last-child > span:first-child {
-					@include icon($icon-tag, 15px);
+					@include icon($icon-tag, $top: 0);
 				}
 			}
 		}

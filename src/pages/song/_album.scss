@@ -78,6 +78,8 @@ album-tracklist-row {
 		&-content {
 			// Track title
 			&-title {
+				@include icon($icon-checkmark, $color-generic-green, $psuedo: after);
+
 				color: white;
 			}
 
@@ -95,7 +97,7 @@ album-tracklist-row {
 
 		// Views icon – don't display for Missing Lyrics
 		&-metadata_element:not([ng-if*='incomplete']) {
-			@include icon($icon-eye, 16px);
+			@include icon($icon-eye);
 		}
 
 		// Dropdown

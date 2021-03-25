@@ -46,11 +46,7 @@
 	.hliVmp {
 		// Currently viewing
 		.ixtWtE {
-			@include icon(
-				$icon-fire,
-				$hover: true,
-				$hover-color: $color-generic-accent
-			);
+			@include icon($icon-fire, $top: 2px, $hover: true, $hover-color: $color-generic-accent);
 		}
 
 		// Currently viewing numbers
@@ -105,7 +101,7 @@
 
 	// Song views icon
 	.GcnrE {
-		@include icon($icon-eye);
+		@include icon($icon-eye, $top: 0);
 
 		&::before {
 			right: 5px;
