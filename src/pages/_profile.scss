@@ -68,8 +68,8 @@ profile-page {
 				> div[ng-if*='message'] {
 					@include icon($icon-message, $hover: true);
 
-					border-left: $style-border-separator;
 					padding: 0 0.5rem 0 0.8rem;
+					border-left: $style-border-separator;
 
 					&::before {
 						margin-right: 7px;
@@ -106,11 +106,11 @@ profile-page {
 			&-transcriptions > .profile_contribution {
 				@include icon($icon-transcription, $scale: 1.25, $top: 3px);
 
+				padding: 0.7rem 1rem;
+
 				&::before {
 					right: 7px;
 				}
-
-				padding: 0.7rem 1rem;
 
 				// LABEL: {{song_title}} by {{artist}}
 				.profile_contribution-target {
@@ -206,8 +206,8 @@ profile-page {
 
 	// LAYOUT: Stats
 	.statistics_panel {
-		background: $color-primary;
 		display: grid;
+		background: $color-primary;
 		grid-template: 1fr 1fr / 1fr 1fr 1fr;
 
 		statistics-panel-item {
