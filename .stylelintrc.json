@@ -100,7 +100,8 @@
 					"border-left",
 					"border-right",
 					"outline",
-					"box-shadow"
+					"box-shadow",
+					"d"
 				]
 			}
 		]
