@@ -1,106 +1,132 @@
-// IQ Amount
-.profile_identity-name_iq_and_role_icon {
-	margin-bottom: 15px;
-
-	> span {
-		top: -1px;
-		padding: 4px 10px;
-		margin-left: 5px;
-		color: white;
-		background: none;
-		border-left: 3px solid white;
-		font-size: initial;
-	}
-}
-
 profile-page {
-	.profile_identity_and_description-action_row {
-		// Edit
-		div[ng-if*='edit'] {
-			@include icon($icon-pencil, $top: 3.5px, $hover: true);
+	.profile_header {
+		// IMAGE: User Avatar
+		&-avatar--verified {
+			border: 3px solid $color-generic-green;
+		}
 
-			color: white;
-			border: none;
+		&-tabs > .profile_tabs-tab::before {
+			display: none;
+		}
+	}
 
-			&:hover {
+	.profile_identity {
+		// LAYOUT: @{{username}} {{iq}}
+		&-name_iq_and_role_icon {
+			margin-bottom: 15px;
+
+			> .profile_identity-iq {
+				top: -1px;
+				padding: 4px 10px;
+				margin-left: 5px;
+				color: white;
 				background: none;
+				border-left: 2px solid white;
+				font-size: initial;
 			}
 		}
 
-		// Follow button
-		a[ng-click*='follow'] {
-			border: none;
-			// Follow
-			&:not([class*='--active']) {
-				@include icon(
-					$icon-plus,
-					$top: 3.5px,
-					$hover: true,
-					$hover-color: $color-generic-green
-				);
+		&_and_description {
+			div[ng-if*='is_verified'] > span {
+				color: $color-generic-green;
+				border: none;
 			}
 
-			// Unfollow
-			&[class*='--active'] {
-				@include icon(
-					$icon-minus,
-					$top: 3.5px,
-					$hover: true,
-					$hover-color: $color-generic-red
-				);
+			// LAYOUT: BUTTON{Edit} | BUTTON[{Follow, Following}, Message]
+			&-action_row {
+				// BUTTON: Edit
+				.square_button[ng-if*='edit'] {
+					@include icon($icon-pencil, $top: 1.5px, $hover: true);
+				}
 
-				background: none;
-			}
+				// BUTTON[{Follow, Following}]
+				follow-button > a[ng-click*='follow'] {
+					padding: 0 0.5rem;
 
-			&:hover {
-				background: none;
-			}
-		}
+					// BUTTON: Follow
+					&:not([class*='--active']) {
+						@include icon($icon-plus, $hover: true, $hover-color: $color-generic-green);
+					}
 
-		// Message button
-		> div[ng-if*='message'] {
-			@include icon($icon-message, $top: 3.5px, $hover: true);
+					// BUTTON: Following
+					&[class*='--active'] {
+						@include icon($icon-minus, $hover: true, $hover-color: $color-generic-red);
 
-			border: none;
+						background: none;
 
-			&:hover {
-				background: none;
-			}
+						&::after {
+							content: 'Unfollow';
+						}
 
-			&::before {
-				margin-right: 7px;
+						> span {
+							display: none;
+						}
+					}
+				}
+
+				// BUTTON: Message
+				> div[ng-if*='message'] {
+					@include icon($icon-message, $hover: true);
+
+					border-left: $style-border-separator;
+					padding: 0 0.5rem 0 0.8rem;
+
+					&::before {
+						margin-right: 7px;
+					}
+				}
 			}
 		}
 	}
 
+	// LAYOUT: {{USERNAME}}'S CONTRIBUTIONS
 	div[scroll-point] scrollable-data {
-		// Contribution dates
-		.text_label {
+		// LABEL: MMMM DD, YYYY
+		.text_label[ng-if*='date'] {
 			@include icon($icon-calendar);
 
 			margin-top: 5px;
 			color: white;
 		}
 
+		// ITEM: Any Contribution
+		.profile_contribution {
+			color: white;
+			background: $color-primary-dark;
+			border-left: 3px solid $color-secondary-light;
+
+			// LABEL: {{username}} [transcribed | created a page]
+			&-content > span {
+				color: #aaaaaa;
+			}
+		}
+
 		profile-contributions {
-			// Transcription contributions
-			&-transcriptions > a {
-				@include icon($icon-transcription, 20px, 12px);
+			// ITEM: Transcription Contribution
+			&-transcriptions > .profile_contribution {
+				@include icon($icon-transcription, $scale: 1.25, $top: 3px);
 
 				&::before {
-					right: 5px;
+					right: 7px;
+				}
+
+				padding: 0.7rem 1rem;
+
+				// LABEL: {{song_title}} by {{artist}}
+				.profile_contribution-target {
+					font-weight: normal;
 				}
 			}
 
-			// Annotation suggestions
-			&-comments > a {
-				@include icon($icon-comment, 20px, 12px);
+			// ITEM: Comment Contribution
+			&-comments > .profile_contribution {
+				@include icon($icon-comment, $scale: 1.25);
 
 				&::before {
 					right: 5px;
 				}
 
-				// Content
+				// Comment Content
 				.note_bubble {
 					margin-top: 0.5rem;
 					background: $color-secondary-dark;
@@ -112,8 +138,8 @@ profile-page {
 				}
 			}
 
-			// Questions
-			&-questions > div {
+			// ITEM: Question Contribution
+			&-questions > .profile_contribution {
 				@include icon($icon-question);
 
 				&::before {
@@ -121,8 +147,8 @@ profile-page {
 				}
 			}
 
-			// Question answers
-			&-answers > div {
+			// ITEM: Answer Contribution
+			&-answers > .profile_contribution {
 				@include icon($icon-checkmark);
 
 				&::before {
@@ -132,12 +158,12 @@ profile-page {
 
 			&-answers,
 			&-questions {
-				> div > div {
+				> .profile_contribution-target {
 					> .u-bottom_margin {
 						margin-bottom: 0.5rem;
 					}
 
-					// Dropdown button
+					// BUTTON: Dropdown
 					> div:nth-child(2) > question > li > div:nth-child(1) {
 						@include icon($icon-chevron-down);
 
@@ -148,6 +174,85 @@ profile-page {
 						}
 					}
 				}
+			}
+
+			// ITEM: Annotation Contribution
+			&-annotations profile-annotation > .standalone_annotation {
+				background: $color-primary-dark;
+
+				> .standalone_annotation-referent_fragment {
+					&::before {
+						display: none;
+					}
+
+					.referent {
+						background: $color-secondary-light;
+						box-shadow: none;
+					}
+				}
+
+				// ITEM: Song Card
+				.mini_card-info:hover {
+					background: $color-primary-hover;
+				}
+			}
+		}
+	}
+
+	// LAYOUT: Bio
+	.white_container {
+		background: $color-primary;
+	}
+
+	// LAYOUT: Stats
+	.statistics_panel {
+		background: $color-primary;
+		display: grid;
+		grid-template: 1fr 1fr / 1fr 1fr 1fr;
+
+		statistics-panel-item {
+			// LABEL: ANNOTATIONS
+			&[label^='Ann'] .statistic_and_label-primary {
+				@include icon($icon-pencil);
+			}
+
+			// LABEL: SUGGESTIONS
+			&[label^='S'] .statistic_and_label-primary {
+				@include icon($icon-comment);
+			}
+
+			// LABEL: TRANSCRIPTIONS
+			&[label^='T'] .statistic_and_label-primary {
+				@include icon($icon-transcription);
+			}
+
+			// LABEL: Questions
+			&[label^='Q'] .statistic_and_label-primary {
+				@include icon($icon-question);
+			}
+
+			// LABEL: ANSWERS
+			&[label^='Ans'] .statistic_and_label-primary {
+				@include icon($icon-checkmark);
+			}
+
+			// LABEL: PYONGS
+			&[label^='P'] .statistic_and_label-primary {
+				@include icon($icon-hashtag);
+			}
+		}
+	}
+
+	// LAYOUT: TOP ACCOMPLISHMENTS
+	paginated-accomplishments {
+		.leaderboard {
+			&-row:not(.leaderboard-row--no_border) {
+				border-bottom: 0.15rem solid $color-secondary;
+			}
+
+			// LABEL: Show More
+			&-load_more {
+				border-top: 0.15rem solid $color-secondary;
 			}
 		}
 	}
@@ -169,7 +274,13 @@ profile-page {
 	}
 
 	span[ng-if*='answerApi.can_clear'] {
-		@include icon($icon-crossmark, 20px, 0, $hover: true, $hover-color: $color-generic-red);
+		@include icon(
+			$icon-crossmark,
+			$scale: 1.25,
+			$top: 0,
+			$hover: true,
+			$hover-color: $color-generic-red
+		);
 
 		&::before {
 			margin-right: 8px;
@@ -179,84 +290,4 @@ profile-page {
 			background: none;
 		}
 	}
-}
-
-// Contribution
-.profile_contribution {
-	color: white;
-	background: $color-primary;
-	border-left: 3px solid $color-secondary-dark;
-}
-
-// Annotation contribution
-.standalone_annotation {
-	background: $color-primary-dark;
-
-	// Annotated snippet
-	.referent {
-		background: $color-secondary-light;
-		box-shadow: none;
-	}
-
-	// Song card
-	.mini_card-info:hover {
-		background: $color-primary-hover;
-	}
-}
-
-// Stats
-.statistics_panel {
-	background: $color-primary;
-
-	statistics-panel-item {
-		// Annotations
-		&[label^='Ann'] .statistic_and_label-primary {
-			@include icon($icon-comment);
-		}
-
-		// Suggestions
-		&[label^='S'] .statistic_and_label-primary {
-			@include icon($icon-comment);
-		}
-
-		// Transcriptions
-		&[label^='T'] .statistic_and_label-primary {
-			@include icon($icon-transcription);
-		}
-
-		// Questions
-		&[label^='Q'] .statistic_and_label-primary {
-			@include icon($icon-question);
-		}
-
-		// Answers
-		&[label^='Ans'] .statistic_and_label-primary {
-			@include icon($icon-checkmark);
-		}
-
-		// Pyongs
-		&[label^='P'] .statistic_and_label-primary {
-			@include icon($icon-hashtag);
-		}
-	}
-}
-
-// Top Accomplishments
-paginated-accomplishments {
-	.leaderboard {
-		// Artists
-		&-row:not(.leaderboard-row--no_border) {
-			border-bottom: 0.15rem solid $color-secondary;
-		}
-
-		// Show More
-		&-load_more {
-			border-top: 0.15rem solid $color-secondary;
-		}
-	}
-}
-
-// Bio
-.white_container {
-	background: $color-primary;
 }
