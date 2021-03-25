@@ -6,7 +6,7 @@
 	],
 	"rules": {
 		"at-rule-no-unknown": null,
-		"color-hex-case": "upper",
+		"color-hex-case": "lower",
 		"color-hex-length": "long",
 		"color-named": "always-where-possible",
 		"declaration-block-no-duplicate-properties": true,
