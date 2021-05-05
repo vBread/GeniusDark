@@ -83,6 +83,13 @@ artist-songs-and-albums {
 					.vertical_album_card-info {
 						display: block;
 						margin-bottom: -20px;
+
+						> h3 {
+							white-space: nowrap;
+							overflow: hidden;
+							width: 150px;
+							text-overflow: ellipsis;
+						}
 					}
 				}
 			}
