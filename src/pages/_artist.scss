@@ -1,10 +1,50 @@
 artist-songs-and-albums {
 	// LAYOUT: POPULAR {{ARTIST}} SONGS
-	.mini_card-info {
-		background: $color-secondary-dark;
+	.mini_card {
+		background: transparent;
 
-		div:nth-child(2) > div > span {
-			@include icon($icon-eye, $top: 4px);
+		&:not(.mini_card--transparent):hover {
+			background: transparent;
+
+			> .mini_card-info .mini_card-title {
+				color: $color-generic-accent;
+			}
+		}
+
+		&_grid-song {
+			margin: 0.3rem 0;
+			width: 50%;
+
+			.mini_card {
+				// IMAGE: {{song_art}}
+				&-thumbnail {
+					height: 90px;
+					width: 90px;
+					border-radius: 6px;
+				}
+
+				&-info {
+					display: block;
+					padding-top: 0;
+					background: transparent;
+
+					.mini_card {
+						// LABEL: {{song_title}}
+						&-title {
+							font-size: 16px;
+						}
+
+						// LABEL: {{ARTIST}}
+						&-subtitle {
+							display: none;
+						}
+					}
+
+					div:nth-child(2) > div > span {
+						@include icon($icon-eye, $top: 4px);
+					}
+				}
+			}
 		}
 	}
 
@@ -31,64 +71,72 @@ artist-songs-and-albums {
 			margin-top: -10px;
 		}
 
-		.thumbnail_grid-grid_element {
-			margin-bottom: initial;
+		.thumbnail_grid {
+			padding: 0.3rem;
 
-			> vertical-album-card > .vertical_album_card {
-				padding: initial !important;
-				margin-bottom: 20px;
+			&-grid_element {
+				margin-bottom: initial;
 
-				&--active {
-					box-shadow: none;
-				}
+				> vertical-album-card > .vertical_album_card {
+					padding: initial !important;
+					margin-bottom: 20px;
 
-				> .vertical_album_card-info {
-					display: none;
-					position: relative;
-					bottom: 27px;
-					left: 7px;
-					font-size: 15px;
-					text-align: left;
-
-					// TEXT: {{album_title}}
-					> h3 {
-						color: white;
+					&--active {
+						box-shadow: none;
 					}
 
-					// TEXT: {{year}}
-					> .vertical_album_card-release_date {
+					> .cover_art {
+						border-radius: 6px;
+					}
+
+					> .vertical_album_card-info {
+						display: none;
 						position: relative;
-						bottom: 32px;
-						color: $color-generic-accent;
-						font-size: 12px;
-					}
-				}
+						bottom: 27px;
+						left: 7px;
+						font-size: 15px;
+						text-align: left;
 
-				&:hover {
-					margin-bottom: initial;
-					background: none !important;
-
-					// IMAGE: {{album_art}}
-					.cover_art::after {
-						content: '';
-						height: 100%;
-						width: 100%;
-						position: absolute;
-						top: 0;
-						left: 0;
-						background: linear-gradient(transparent, #101010);
-					}
-
-					// TEXT: {{album_title}}
-					.vertical_album_card-info {
-						display: block;
-						margin-bottom: -20px;
-
+						// TEXT: {{album_title}}
 						> h3 {
-							white-space: nowrap;
-							overflow: hidden;
-							width: 150px;
-							text-overflow: ellipsis;
+							color: white;
+						}
+
+						// TEXT: {{year}}
+						> .vertical_album_card-release_date {
+							position: relative;
+							bottom: 32px;
+							color: $color-generic-accent;
+							font-size: 12px;
+						}
+					}
+
+					&:hover {
+						margin-bottom: initial;
+						background: none !important;
+
+						// IMAGE: {{album_art}}
+						.cover_art::after {
+							content: '';
+							height: 100%;
+							width: 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+							background: linear-gradient(transparent, #101010);
+						}
+
+						// TEXT: {{album_title}}
+						.vertical_album_card-info {
+							display: block;
+							margin-bottom: -20px;
+
+							> h3 {
+								white-space: nowrap;
+								overflow: hidden;
+								width: 150px;
+								text-overflow: ellipsis;
+							}
 						}
 					}
 				}
