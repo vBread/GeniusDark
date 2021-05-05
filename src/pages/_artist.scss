@@ -144,3 +144,75 @@ artist-songs-and-albums {
 		}
 	}
 }
+
+.modal_window {
+	&-content--narrow_width {
+		max-width: 800px;
+	}
+
+	scrollable-data > div[ng-if*='$scroll'] {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.u-display_block {
+		flex-basis: 0;
+		flex-grow: 1;
+
+		> .profile_list_item {
+			border-bottom: none;
+			margin-right: 10px;
+
+			&:hover {
+				.mini_card-info .mini_card-title {
+					color: $color-generic-accent;
+				}
+			}
+
+			> mini-song-card {
+				> .mini_card {
+					background: transparent;
+
+					&--small .mini_card {
+						&-thumbnail {
+							width: 75px;
+							height: 75px;
+							border-radius: 6px;
+						}
+
+						&-info {
+							display: block;
+							padding-top: 0.2rem;
+						}
+					}
+
+					.mini_card-info {
+						.mini_card {
+							&-title {
+								font-size: 15px;
+							}
+
+							&-subtitle {
+								display: none;
+							}
+						}
+
+						div:nth-child(2) > div > span {
+							@include icon($icon-eye, $top: 4px);
+
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-close_button {
+		right: 0;
+		top: 20px;
+		left: 24rem;
+
+		@include icon($icon-crossmark, $size: 1rem, $scale: 2.5);
+	}
+}
