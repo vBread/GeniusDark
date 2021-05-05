@@ -85,7 +85,7 @@ profile-page {
 		.text_label[ng-if*='date'] {
 			@include icon($icon-calendar);
 
-			margin-top: 5px;
+			margin-top: 10px;
 			color: white;
 		}
 
