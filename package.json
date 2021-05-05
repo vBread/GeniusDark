@@ -24,13 +24,13 @@
 	"homepage": "https://github.com/vBread/Genius-Dark#readme",
 	"devDependencies": {
 		"@types/mustache": "^4.1.1",
-		"@types/node": "^15.0.1",
+		"@types/node": "^15.0.2",
 		"@types/prettier": "^2.2.3",
 		"@types/sass": "^1.16.0",
 		"mustache": "^4.2.0",
 		"prettier": "^2.2.1",
 		"sass": "^1.32.12",
-		"stylelint": "^13.13.0",
+		"stylelint": "^13.13.1",
 		"stylelint-config-standard": "^22.0.0",
 		"stylelint-order": "^4.1.0",
 		"stylelint-scss": "^3.19.0"
