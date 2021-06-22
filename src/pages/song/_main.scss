@@ -34,6 +34,11 @@
 
 			background: none;
 		}
+
+		span[ng-if*='unreleased'] {
+			top: 10px;
+			position: relative;
+		}
 	}
 
 	.annotation_sidebar_unit {
