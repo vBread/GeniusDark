@@ -57,7 +57,11 @@ inbox[inbox-name='main_activity_inbox'] {
 	&-action {
 		&:hover,
 		&.header-action--active {
-			border-bottom: 3px solid $color-generic-accent;
+			> .header-action-label {
+				color: $color-generic-accent;
+			}
+
+			border-bottom: none;
 		}
 
 		&-icon {
