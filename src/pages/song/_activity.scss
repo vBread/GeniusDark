@@ -1,0 +1,10 @@
+// LAYOUT: Contributions & Activity
+song-activity {
+	&-stream inbox-line-item .feed_dropdown-item {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		border-radius: 7px;
+		border-top: none;
+		background: $color-secondary;
+	}
+}
