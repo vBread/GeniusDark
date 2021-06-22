@@ -2,7 +2,7 @@
 @name           Genius Dark
 @description	A modern dark mode theme for Genius
 @author         Bread <developernamedbread@gmail.com>
-@version        1.5.0
+@version        1.6.0
 @namespace      https://github.com/vBread
 @homepageURL    https://github.com/vBread/GeniusDark
 @updateURL    	https://github.com/vBread/GeniusDark/raw/master/genius-dark.user.css
@@ -508,7 +508,11 @@
 	}
 	.header-action:hover,
 	.header-action.header-action--active {
-		border-bottom: 3px solid var(--color-generic-accent);
+		border-bottom: none;
+	}
+	.header-action:hover > .header-action-label,
+	.header-action.header-action--active > .header-action-label {
+		color: var(--color-generic-accent);
 	}
 	.header-action-icon--groups_inbox::before {
 		background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS41IDIuNzVhLjI1LjI1IDAgMDEuMjUtLjI1aDguNWEuMjUuMjUgMCAwMS4yNS4yNXY1LjVhLjI1LjI1IDAgMDEtLjI1LjI1aC0zLjVhLjc1Ljc1IDAgMDAtLjUzLjIyTDMuNSAxMS40NFY5LjI1YS43NS43NSAwIDAwLS43NS0uNzVoLTFhLjI1LjI1IDAgMDEtLjI1LS4yNXYtNS41ek0xLjc1IDFBMS43NSAxLjc1IDAgMDAwIDIuNzV2NS41QzAgOS4yMTYuNzg0IDEwIDEuNzUgMTBIMnYxLjU0M2ExLjQ1NyAxLjQ1NyAwIDAwMi40ODcgMS4wM0w3LjA2MSAxMGgzLjE4OUExLjc1IDEuNzUgMCAwMDEyIDguMjV2LTUuNUExLjc1IDEuNzUgMCAwMDEwLjI1IDFoLTguNXpNMTQuNSA0Ljc1YS4yNS4yNSAwIDAwLS4yNS0uMjVoLS41YS43NS43NSAwIDExMC0xLjVoLjVjLjk2NiAwIDEuNzUuNzg0IDEuNzUgMS43NXY1LjVBMS43NSAxLjc1IDAgMDExNC4yNSAxMkgxNHYxLjU0M2ExLjQ1NyAxLjQ1NyAwIDAxLTIuNDg3IDEuMDNMOS4yMiAxMi4yOGEuNzUuNzUgMCAxMTEuMDYtMS4wNmwyLjIyIDIuMjJ2LTIuMTlhLjc1Ljc1IDAgMDEuNzUtLjc1aDFhLjI1LjI1IDAgMDAuMjUtLjI1di01LjV6Ii8+PC9zdmc+')
@@ -1382,6 +1386,14 @@
 		background: #252525;
 	}
 
+	song-activity-stream inbox-line-item .feed_dropdown-item {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		border-radius: 7px;
+		border-top: none;
+		background: #303030;
+	}
+
 	album-page .header_with_cover_art-cover_art .cover_art {
 		outline-color: gray;
 	}
@@ -1925,6 +1937,10 @@
 		background: 20px;
 		-webkit-mask: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS4wMTMgMS40MjdhMS43NSAxLjc1IDAgMDEyLjQ3NCAwbDEuMDg2IDEuMDg2YTEuNzUgMS43NSAwIDAxMCAyLjQ3NGwtOC42MSA4LjYxYy0uMjEuMjEtLjQ3LjM2NC0uNzU2LjQ0NWwtMy4yNTEuOTNhLjc1Ljc1IDAgMDEtLjkyNy0uOTI4bC45MjktMy4yNWExLjc1IDEuNzUgMCAwMS40NDUtLjc1OGw4LjYxLTguNjF6bTEuNDE0IDEuMDZhLjI1LjI1IDAgMDAtLjM1NCAwTDEwLjgxMSAzLjc1bDEuNDM5IDEuNDQgMS4yNjMtMS4yNjNhLjI1LjI1IDAgMDAwLS4zNTRsLTEuMDg2LTEuMDg2ek0xMS4xODkgNi4yNUw5Ljc1IDQuODFsLTYuMjg2IDYuMjg3YS4yNS4yNSAwIDAwLS4wNjQuMTA4bC0uNTU4IDEuOTUzIDEuOTUzLS41NThhLjI0OS4yNDkgMCAwMC4xMDgtLjA2NGw2LjI4Ni02LjI4NnoiPjwvcGF0aD48L3N2Zz4=')
 			no-repeat;
+	}
+	.song_body .lyrics span[ng-if*='unreleased'] {
+		top: 10px;
+		position: relative;
 	}
 	.song_body .annotation_sidebar_unit {
 		background: #404040;
